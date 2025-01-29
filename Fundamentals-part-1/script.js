@@ -84,3 +84,16 @@ console.log(x);
 
 //comparison operators
 //>,<.>=,<=
+
+//CHALLENGE-1
+const massMark = 78;
+const heightMark = 1.69;
+const massJohn = 92;
+const heightJohn = 1.95;
+
+//BMI = mass / height ** 2 = mass / (height * height). (mass in kg and height in meter).
+const BMIMark = massMark / heightMark ** 2;
+const BMIJohn = massJohn / heightJohn ** 2;
+const markHigherBMI = BMIMark > BMIJohn;
+console.log(BMIMark, BMIJohn, markHigherBMI);
+

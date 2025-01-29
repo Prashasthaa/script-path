@@ -48,3 +48,39 @@ console.log(typeof year); //undefined
 
 //null
 console.log(null);
+
+//let
+let age = 30;
+age = 31;
+
+//c0nstant
+const birthYear = 2005;
+// birthYear = 2001; //error
+
+//var
+var job = "programmer";
+job = "teacher";
+
+//operator
+//arthematic operator
+const now = 2037;
+const ageJones = now - 1991;
+const ageSarah = now - 2018;
+console.log(ageJones, ageSarah);
+console.log(ageJones * 2, ageJones / 10, 2 ** 3);
+//2**3 => 2*2*2;
+//+
+const firstName = "Prashastha";
+const lastName = "Poojary";
+console.log(firstName + " " + lastName);
+
+//assignment operator
+let x = 5 + 10; //15
+x += 10; //x= x+10=25
+x *= 4; //x=x*2=100
+x++; //x=x+1=101
+x--; //x=x-1=100
+console.log(x);
+
+//comparison operators
+//>,<.>=,<=

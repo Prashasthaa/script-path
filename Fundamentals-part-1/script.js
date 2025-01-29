@@ -137,4 +137,41 @@ if (BMIMark > BMIJohn) {
 } else {
   console.log(`John's  BMI (${BMIJohn}) is higher than Mark (${BMIMark})`);
 }
+//Type conversion  coercion
+const inputYear = "1991";
+console.log(inputYear + 18); //199118
+console.log(Number(inputYear) + 18); //2009
+
+console.log(Number("Prash")); //NaN ->not a number
+console.log(String(23));
+
+//Type coercion
+console.log("I am " + 23 + " Years old");
+console.log("23" - 10 - "3"); //10
+console.log("23" * 2); //46
+console.log("20" / 2); //10
+
+falsy & truly
+6 flasy values are false,null,'',0,undefined,NaN;
+console.log(Boolean(0)); //false
+console.log(Boolean(undefined)); //false
+console.log(Boolean(NaN)); //false
+console.log(Boolean(null)); //false
+console.log(Boolean("Pras")); //true
+
+//Equality operator
+//=== strict ,== lose-> type coercion
+const age = 18;
+if (age === 18) console.log("You Just became an adult (strict)");
+if (age == "18") console.log("You Just became an adult (loose)");
+
+//Boolean logic AND , OR, NOT
+const hasDriverLicense = true;
+const hasgoodVision = false;
+
+console.log(hasDriverLicense && hasgoodVision); //false
+console.log(hasDriverLicense || hasgoodVision); //true
+console.log(!hasDriverLicense); //false
+console.log(!hasgoodVision); //true
+
 

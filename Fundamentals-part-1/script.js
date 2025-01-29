@@ -97,3 +97,28 @@ const BMIJohn = massJohn / heightJohn ** 2;
 const markHigherBMI = BMIMark > BMIJohn;
 console.log(BMIMark, BMIJohn, markHigherBMI);
 
+//strings & Template literals
+
+const firstName = "Prashastha";
+const job = "programmer";
+const birtYear = 2005;
+const year = 2037;
+
+const prash = `I'm ${firstName}, a ${year - birtYear} year old ${job}`;
+console.log(prash);
+
+// /n -> new line
+
+//Decision Taking
+const age = 17;
+const isOldEnough = age >= 18;
+
+//if-else-statement
+if (isOldEnough) {
+  console.log("Sarah can start driving license 🚗");
+} else {
+  const yearsLeft = 18 - age;
+  console.log(`Sarah is to young. wait another ${yearsLeft} years :)`);
+}
+
+

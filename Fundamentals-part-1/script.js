@@ -191,4 +191,43 @@ else if (
   console.log("Both win the trophy🏆");
 else console.log("No one wins trophy 😒");
 
+//Switch Statement
+const day = "monday";
+
+switch (day) {
+  case "monday": //day==='monday'
+    console.log(`Plan course structure`);
+    break;
+  case "tuesday":
+    console.log("prepare theory videos");
+    break;
+  case "wednesday":
+  case "thursday":
+    console.log("Write code examples");
+    break;
+  case "friday":
+    console.log("Record videos");
+    break;
+  case "saturday":
+  case "sunday":
+    console.log("Enjoy");
+    break;
+  default:
+    console.log("Invalid day");
+}
+
+//statements and expression
+
+//conditional operator(ternary)
+const age = 22;
+age >= 18
+  ? console.log("I Like to drink wine 🍷")
+  : console.log("I like to drink water 💧");
+
+//challenge-4
+const bill = 275;
+const tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2;
+console.log(
+  `The bill was ${bill}, the tip was ${tip} and the total value ${bill + tip}`
+);
 

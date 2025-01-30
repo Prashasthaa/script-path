@@ -84,3 +84,58 @@ checkWinner(scoreDolphins, scoreKoalas);
 scoreDolphins = calcAverage(85, 54, 41);
 scoreKoalas = calcAverage(23, 34, 27);
 checkWinner(scoreDolphins, scoreKoalas);
+
+//arrays
+const fiend1 = "Michael";
+const friend2 = "Steven";
+const friend3 = "Peter";
+
+const friends = ["Michael", "Steven", "Peter"];
+console.log(friends);
+console.log(friends[0]);
+console.log(friends.length);
+console.log(friends[0].length);
+
+friends[2] = "Jay";
+console.log(friends);
+
+const prash = ["Prashastha", "Poojary", 2037 - 2005, "Student", friends];
+console.log(prash);
+
+//Excise
+function calcAge(birthYear) {
+  return 2037 - birthYear;
+}
+const years = [1990, 1967, 2002, 2010, 2018];
+
+array operations
+add elemnts
+const friends = ["Michael", "Steven", "Peter"];
+const newLength = friends.push("Jay");
+console.log(friends);
+console.log(newLength);
+
+friends.unshift("Jay");
+console.log(friends);
+
+//delete elemnts
+friends.pop(); //last
+console.log(friends);
+
+friends.shift(); //First
+console.log(friends);
+
+console.log(friends.indexOf("Steven"));
+
+console.log(friends.includes("Bob"));
+
+//challenge-3
+const calcTip = function (bill) {
+  return bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+};
+
+const bills = [125, 555, 44];
+const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+const totals = [bills[0] * tips[0], bills[1] * tips[1], bills[2] * tips[2]];
+
+console.log(bills, tips, totals);

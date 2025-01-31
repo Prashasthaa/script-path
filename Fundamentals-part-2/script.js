@@ -284,4 +284,5 @@ const calcAverage = function (arr) {
 
   return sum / arr.length;
 };
+
 console.log(calcAverage(totals));

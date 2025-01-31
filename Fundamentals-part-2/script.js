@@ -108,8 +108,8 @@ function calcAge(birthYear) {
 }
 const years = [1990, 1967, 2002, 2010, 2018];
 
-array operations
-add elemnts
+//array operations
+//add elemnts
 const friends = ["Michael", "Steven", "Peter"];
 const newLength = friends.push("Jay");
 console.log(friends);
@@ -139,3 +139,77 @@ const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
 const totals = [bills[0] * tips[0], bills[1] * tips[1], bills[2] * tips[2]];
 
 console.log(bills, tips, totals);
+
+//objects
+const jonas = {
+  firstName: "Jonas",
+  lastName: "Schmedtmann",
+  age: 2037 - 1991,
+  job: "teacher",
+  friends: ["Micheal", "Peter", "Steven"],
+};
+console.log(jonas.lastName);
+console.log(jonas["lastName"]);
+
+jonas.location = "Portugal";
+jonas["twitter"] = "@jonasschment";
+console.log(jonas);
+
+//challenge
+////Jonas has 3 friends and his best friend is called Michael
+console.log(
+  `${jonas.firstName} as ${jonas.friends.length} friends, and his best freind is ${jonas.friends[0]}`
+);
+
+const jonas = {
+  firstName: "Jonas",
+  lastName: "Schmedtmann",
+  birthYear: 1991,
+  job: "teacher",
+  friends: ["Micheal", "Peter", "Steven"],
+  hasDriverLicense: true,
+  //method
+  // calcAge: function (birthyear) {
+  //   return 2037 - birthyear;
+  // },
+  calcAge: function () {
+    return 2037 - this.birthYear;
+  },
+};
+
+console.log(jonas.calcAge());
+
+//challenge-3
+const mark = {
+  fullName: "Mark Miller",
+  mass: 78,
+  height: 1.69,
+  calcBMI: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  },
+};
+const john = {
+  fullName: "John Smith",
+  mass: 92,
+  height: 1.95,
+  calcBMI: function () {
+    this.bmi = this.mass / this.height ** 2;
+    return this.bmi;
+  },
+};
+
+mark.calcBMI();
+john.calcBMI();
+console.log(mark.bmi);
+console.log(john.bmi);
+
+if (mark.bmi > john.bmi) {
+  console.log(
+    `${mark.fullName}'s BMI(${mark.bmi}) is higher than ${john.fullName}'s BMI(${john.bmi})`
+  );
+} else if (mark.bmi < john.bmi) {
+  console.log(
+    `${mark.fullName}'s BMI(${mark.bmi}) is lesser than ${john.fullName}'s BMI(${john.bmi})`
+  );
+}

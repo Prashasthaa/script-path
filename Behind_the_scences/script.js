@@ -129,10 +129,10 @@ jonas.greet();
 jonas.calcAge();
 
 //arguments keyword
-const addExpr = function (a, b) {
-  console.log(arguments);
-  return a + b;
-};
+// const addExpr = function (a, b) {
+//   console.log(arguments);
+//   return a + b;
+// };
 
 addExpr(2, 3);
 addExpr(2, 6, 7, 3);

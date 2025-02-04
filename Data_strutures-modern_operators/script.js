@@ -87,7 +87,7 @@ const game = {
   },
 };
 
-//////////////////////////////////////
+
 // Sets
 const ordersSet = new Set([
   'Pasta',
@@ -112,7 +112,7 @@ console.log(ordersSet);
 
 for (const order of ordersSet) console.log(order);
 
-///////////////////////////////////////
+
 // Coding Challenge #2
 
 // 1.
@@ -190,7 +190,7 @@ printGoals(...game.scored);
 team1 < team2 && console.log('Team 1 is more likely to win');
 team1 > team2 && console.log('Team 2 is more likely to win');
 
-///////////////////////////////////////
+
 // The Nullish Coalescing Operator
 restaurant.numGuests = 0;
 const guests = restaurant.numGuests || 10;
@@ -200,7 +200,7 @@ console.log(guests);
 const guestCorrect = restaurant.numGuests ?? 10;
 console.log(guestCorrect);
 
-///////////////////////////////////////
+
 // Short Circuiting (&& and ||)
 
 console.log('---- OR ----');
@@ -232,7 +232,7 @@ if (restaurant.orderPizza) {
 
 restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
 
-///////////////////////////////////////
+
 // Rest Pattern and Parameters
 // 1) Destructuring
 
@@ -270,7 +270,7 @@ add(...x);
 restaurant.orderPizza('mushrooms', 'onion', 'olives', 'spinach');
 restaurant.orderPizza('mushrooms');
 
-///////////////////////////////////////
+
 // Destructuring Arrays
 const arr = [2, 3, 4];
 const a = arr[0];

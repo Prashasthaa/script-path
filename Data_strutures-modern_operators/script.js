@@ -87,37 +87,99 @@
 //   },
 // };
 
-<<<<<<< HEAD
+// String Methods Practice
 
-// Sets
-const ordersSet = new Set([
-  'Pasta',
-  'Pizza',
-  'Pizza',
-  'Risotto',
-  'Pasta',
-  'Pizza',
-]);
-console.log(ordersSet);
-=======
-// Working With Strings
->>>>>>> 3700af7 (part-4)
+const flights =
+  '_Delayed_Departure;fao93766109;txl2133758440;11:25+_Arrival;bru0943384722;fao93766109;11:45+_Delayed_Arrival;hel7439299980;fao93766109;12:05+_Departure;fao93766109;lis2323639855;12:30';
 
-// Split and join
-console.log('a+very+nice+string'.split('+'));
-console.log('Jonas Schmedtmann'.split(' '));
+// 🔴 Delayed Departure from FAO to TXL (11h25)
+//              Arrival from BRU to FAO (11h45)
+//   🔴 Delayed Arrival from HEL to FAO (12h05)
+//            Departure from FAO to LIS (12h30)
 
-const [firstName, lastName] = 'Jonas Schmedtmann'.split(' ');
+const getCode = str => str.slice(0, 3).toUpperCase();
 
-const newName = ['Mr.', firstName, lastName.toUpperCase()].join(' ');
-console.log(newName);
+for (const flight of flights.split('+')) {
+  const [type, from, to, time] = flight.split(';');
+  const output = `${type.startsWith('_Delayed') ? '🔴' : ''}${type.replaceAll(
+    '_',
+    ' '
+  )} ${getCode(from)} ${getCode(to)} (${time.replace(':', 'h')})`.padStart(36);
+  console.log(output);
+}
 
-<<<<<<< HEAD
+// // Coding Challenge #4
 
-// Coding Challenge #2
-=======
+// document.body.append(document.createElement('textarea'));
+// document.body.append(document.createElement('button'));
+
+// document.querySelector('button').addEventListener('click', function () {
+//   const text = document.querySelector('textarea').value;
+//   const rows = text.split('\n');
+
+//   for (const [i, row] of rows.entries()) {
+//     const [first, second] = row.toLowerCase().trim().split('_');
+
+//     const output = `${first}${second.replace(
+//       second[0],
+//       second[0].toUpperCase()
+//     )}`;
+//     console.log(`${output.padEnd(20)}${'✅'.repeat(i + 1)}`);
+//   }
+// });
+
+// // Working With Strings
+
+// // Split and join
+// console.log('a+very+nice+string'.split('+'));
+// //console.log('Jonas Schmedtmann'.split(' '));
+
+// const [firstName, lastName] = 'Jonas Schmedtmann'.split(' ');
+
+// const newName = ['Mr.', firstName, lastName.toUpperCase()].join(' ');
+// console.log(newName);
+
+// const capitalizeName = function (name) {
+//   const names = name.split(' ');
+//   const namesUpper = [];
+
+//   for (const n of names) {
+//     // namesUpper.push(n[0].toUpperCase() + n.slice(1));
+//     namesUpper.push(n.replace(n[0], n[0].toUpperCase()));
+//   }
+//   console.log(namesUpper.join(' '));
+// };
+
+// capitalizeName('jessica ann smith davis');
+// capitalizeName('jonas schmedtmann');
+
+// // Padding
+// const message = 'Go to gate 23!';
+// console.log(message.padStart(20, '+').padEnd(30, '+'));
+// console.log('Jonas'.padStart(20, '+').padEnd(30, '+'));
+
+// const maskCreditCard = function (number) {
+//   const str = number + '';
+//   const last = str.slice(-4);
+//   return last.padStart(str.length, '*');
+// };
+
+// console.log(maskCreditCard(64637836));
+// console.log(maskCreditCard(43378463864647384));
+// console.log(maskCreditCard('334859493847755774747'));
+
+// // Repeat
+// const message2 = 'Bad waether... All Departues Delayed...\n ';
+// console.log(message2.repeat(2));
+
+// const planesInLine = function (n) {
+//   console.log(`There are ${n} planes in line ${'🛩'.repeat(n)}`);
+// };
+// planesInLine(5);
+// planesInLine(3);
+// planesInLine(12);
+
 // const airline = 'TAP Air Portugal';
->>>>>>> 3700af7 (part-4)
 
 // console.log(airline.toLowerCase());
 // console.log(airline.toUpperCase());
@@ -203,27 +265,14 @@ console.log(newName);
 //   else console.log('You got lucky 😎');
 // };
 
-<<<<<<< HEAD
-
-// The Nullish Coalescing Operator
-restaurant.numGuests = 0;
-const guests = restaurant.numGuests || 10;
-console.log(guests);
-=======
 // checkMiddleSeat('11B');
 // checkMiddleSeat('23C');
 // checkMiddleSeat('3E');
->>>>>>> 3700af7 (part-4)
 
 // console.log(new String('jonas'));
 // console.log(typeof new String('jonas'));
 
-<<<<<<< HEAD
-
-// Short Circuiting (&& and ||)
-=======
 // console.log(typeof new String('jonas').slice(1));
->>>>>>> 3700af7 (part-4)
 
 // //////////////////////////////////////
 // // Sets
@@ -270,15 +319,9 @@ console.log(guests);
 //   console.log(`Odd of ${teamStr} ${odd}`);
 // }
 
-<<<<<<< HEAD
-
-// Rest Pattern and Parameters
-// 1) Destructuring
-=======
 // // Odd of victory Bayern Munich: 1.33
 // // Odd of draw: 3.25
 // // Odd of victory Borrussia Dortmund: 6.5
->>>>>>> 3700af7 (part-4)
 
 // // BONUS
 // // So the solution is to loop over the array, and add the array elements as object properties, and then increase the count as we encounter a new occurence of a certain element
@@ -311,17 +354,8 @@ console.log(guests);
 // const allPlayers = [...players1, ...players2];
 // console.log(allPlayers);
 
-<<<<<<< HEAD
-
-// Destructuring Arrays
-const arr = [2, 3, 4];
-const a = arr[0];
-const b = arr[1];
-const c = arr[2];
-=======
 // // 4.
 // const players1Final = [...players1, 'Thiago', 'Coutinho', 'Periscic'];
->>>>>>> 3700af7 (part-4)
 
 // // 5.
 // const {

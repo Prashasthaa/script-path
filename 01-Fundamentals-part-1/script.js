@@ -231,9 +231,37 @@
 //   `The bill was ${bill}, the tip was ${tip} and the total value ${bill + tip}`
 // );
 
+/*
+//type conversion
 const inputYear = "1991";
 console.log(Number(inputYear), inputYear);
 
 console.log(Number(inputYear) + 18);
 console.log(Number("Jonas"));
 console.log(typeof NaN);
+
+console.log(String(23), 23);
+
+//type coercion
+console.log("I am " + 23 + " years old");
+console.log("23" - 23);
+console.log("23" + 23);
+console.log("23" / 23);
+
+console.log("23" * 23);
+*/
+
+//5 falsy values. :
+
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean("Jonas"));
+console.log(Boolean(null));
+console.log(Boolean({}));
+
+let money;
+if (money) {
+  console.log("Don't spend");
+} else {
+  console.log("you should get job!");
+}

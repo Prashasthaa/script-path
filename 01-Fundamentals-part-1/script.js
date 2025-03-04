@@ -253,15 +253,32 @@ console.log("23" * 23);
 
 //5 falsy values. :
 
-console.log(Boolean(0));
-console.log(Boolean(undefined));
-console.log(Boolean("Jonas"));
-console.log(Boolean(null));
-console.log(Boolean({}));
+// console.log(Boolean(0));
+// console.log(Boolean(undefined));
+// console.log(Boolean("Jonas"));
+// console.log(Boolean(null));
+// console.log(Boolean({}));
 
-let money;
-if (money) {
-  console.log("Don't spend");
-} else {
-  console.log("you should get job!");
+// let money;
+// if (money) {
+//   console.log("Don't spend");
+// } else {
+//   console.log("you should get job!");
+// }
+
+const age = 18;
+if (age === 18) console.log("you just be can adult");
+
+const favourite = Number(prompt("enter your favourite number?"));
+console.log(favourite);
+console.log(typeof favourite);
+
+if (favourite === 23) {
+  console.log("cool great number is 23");
+} else if (favourite === 7) {
+  console.log("cool great number is 7");
+}
+
+if (favourite !== 23) {
+  console.log("why not 237");
 }

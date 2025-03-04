@@ -266,19 +266,38 @@ console.log("23" * 23);
 //   console.log("you should get job!");
 // }
 
-const age = 18;
-if (age === 18) console.log("you just be can adult");
+// const age = 18;
+// if (age === 18) console.log("you just be can adult");
 
-const favourite = Number(prompt("enter your favourite number?"));
-console.log(favourite);
-console.log(typeof favourite);
+// const favourite = Number(prompt("enter your favourite number?"));
+// console.log(favourite);
+// console.log(typeof favourite);
 
-if (favourite === 23) {
-  console.log("cool great number is 23");
-} else if (favourite === 7) {
-  console.log("cool great number is 7");
-}
+// if (favourite === 23) {
+//   console.log("cool great number is 23");
+// } else if (favourite === 7) {
+//   console.log("cool great number is 7");
+// }
 
-if (favourite !== 23) {
-  console.log("why not 237");
-}
+// if (favourite !== 23) {
+//   console.log("why not 237");
+// }
+
+// const day = "tuesday";
+
+// switch (day) {
+//   case "monday":
+//     console.log("Plan course Structure");
+//     console.log("go to coding  meetup");
+//     break;
+//   case "tuesday":
+//     console.log("Plan course-2 Structure");
+//     console.log("go to coding-2  meetup");
+//     break;
+//   default:
+//     console.log("not a valid day!");
+// }
+
+const age = 23;
+
+console.log(`I Like to drink ${age >= 18 ? "wine" : "water"}`);

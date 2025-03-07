@@ -300,20 +300,37 @@
 // // const interface = "Audio";
 // //const private = "Audio";
 
-function logger(name) {
-  console.log("My name is Jonas");
-}
+// function logger(name) {
+//   console.log("My name is Jonas");
+// }
 
-//calling /running /invoking function
-logger();
-logger();
+// //calling /running /invoking function
+// logger();
+// logger();
 
-function fruitProcessor(apples, oranges) {
-  console.log(apples, oranges);
-  const jucice = `Juice with ${apples} apples and ${oranges} oranges`;
-  return jucice;
+// function fruitProcessor(apples, oranges) {
+//   console.log(apples, oranges);
+//   const jucice = `Juice with ${apples} apples and ${oranges} oranges`;
+//   return jucice;
+// }
+// const appleJucice = fruitProcessor(9, 0);
+// console.log(appleJucice);
+// const orangeJucice = fruitProcessor(0, 10);
+// console.log(orangeJucice);
+
+// const appleOrangeJucie = fruitProcessor(2, 3);
+// console.log(appleOrangeJucie);
+
+//function declaration
+function calcAge(birthYear) {
+  const age = 2037 - birthYear;
+  return age;
 }
-const appleJucice = fruitProcessor(9, 0);
-console.log(appleJucice);
-const orangeJucice = fruitProcessor(0, 10);
-console.log(orangeJucice);
+console.log(calcAge(1998));
+
+//function expression
+const calcAge2 = function (birthYear) {
+  const age = 2037 - birthYear;
+  return age;
+};
+console.log(calcAge2(1998));

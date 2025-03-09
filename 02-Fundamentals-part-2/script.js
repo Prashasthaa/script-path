@@ -373,3 +373,22 @@
 // console.log(friend[1], friend[2]);
 // console.log(friend.length);
 // console.log(friend[friend.length - 1]);
+
+// const friend = ["Micheal", "Steven", "Peter"];
+// friend.push("Jay");
+// console.log(friend);
+
+// friend.unshift("John");
+// console.log(friend);
+
+// friend.pop();
+// console.log(friend);
+
+// friend.shift();
+// console.log(friend);
+
+// console.log(friend.indexOf("Steven"));
+// console.log(friend.indexOf("bob"));
+
+// console.log(friend.includes("Steven"));
+// console.log(friend.includes("bob"));

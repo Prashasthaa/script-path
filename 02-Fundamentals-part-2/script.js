@@ -321,16 +321,55 @@
 // const appleOrangeJucie = fruitProcessor(2, 3);
 // console.log(appleOrangeJucie);
 
-//function declaration
-function calcAge(birthYear) {
-  const age = 2037 - birthYear;
-  return age;
-}
-console.log(calcAge(1998));
+// //function declaration
+// function calcAge(birthYear) {
+//   const age = 2037 - birthYear;
+//   return age;
+// }
+// console.log(calcAge(1998));
 
-//function expression
-const calcAge2 = function (birthYear) {
-  const age = 2037 - birthYear;
-  return age;
-};
-console.log(calcAge2(1998));
+// //function expression
+// const calcAge2 = function (birthYear) {
+//  return 2037 - birthYear;
+//   return age;
+// };
+// console.log(calcAge2(1998));
+
+// //function expression
+// const calcAge2 = function (birthYear) {
+//   return 2037 - birthYear;
+// };
+
+// //Arrow function
+// const calcAge = (birthYear) => 2037 - birthYear;
+// const age3 = calcAge(1992);
+// console.log(age3);
+
+// ///function calling other function
+
+// function cutFruitPieces(fruit) {
+//   return fruit * 4;
+// }
+
+// function fruitProcessor(apples, oranges) {
+//   const applePieces = cutFruitPieces(apples);
+//   const orangePieces = cutFruitPieces(oranges);
+//   const jucice = `Juice with ${applePieces} apples pices and ${orangePieces} oranges pieces`;
+//   return jucice;
+// }
+// console.log(fruitProcessor(2, 3));
+
+// const friend1 = "Micheal";
+// const friend2 = "Steven";
+// const friend3 = "Peter";
+
+// const friend = ["Micheal", "Steven", "Peter"];
+// console.log(friend);
+
+// const years = new Array(1991, 1997, 2008, 2020);
+// console.log(years);
+
+// console.log(friend[0]);
+// console.log(friend[1], friend[2]);
+// console.log(friend.length);
+// console.log(friend[friend.length - 1]);

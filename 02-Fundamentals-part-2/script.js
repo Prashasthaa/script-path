@@ -426,3 +426,18 @@
 //   friends: ["Micheal", "Steven", "Peter"],
 // };
 // console.log(jonas);
+
+// //Loops
+// for (let i = 1; i <= 5; i++) console.log(`Lifting ${i}🏋️`);
+
+const jonas = [
+  "Jonas",
+  "Pojary",
+  2037 - 1996,
+  "Teacher",
+  ["Micheal", "Steven", "Peter"],
+];
+
+for (let i = 0; i < jonas.length; i++) {
+  console.log(jonas[i]);
+}

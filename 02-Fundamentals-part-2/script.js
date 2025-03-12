@@ -430,14 +430,35 @@
 // //Loops
 // for (let i = 1; i <= 5; i++) console.log(`Lifting ${i}🏋️`);
 
+/*
 const jonas = [
   "Jonas",
   "Pojary",
   2037 - 1996,
   "Teacher",
   ["Micheal", "Steven", "Peter"],
+  true,
 ];
+let arr = [];
 
 for (let i = 0; i < jonas.length; i++) {
   console.log(jonas[i]);
+  // arr[i] = typeof jonas[i];
+  arr.push(typeof jonas[i]);
 }
+
+for (let i = 0; i < arr.length; i++) {
+  console.log(arr[i]);
+}
+
+const years = [1990, 1967, 2002, 2010, 2018];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+  ages.push(2037 - years[i]);
+}
+
+console.log(ages);
+
+// countine and break
+*/

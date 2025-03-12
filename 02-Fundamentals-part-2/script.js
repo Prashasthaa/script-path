@@ -401,19 +401,28 @@
 //   friends: ["Micheal", "Steven", "Peter"],
 // };
 
-const jonas = {
-  firstName: "Jonas",
-  lastName: "Pojary",
-  age: 2037 - 1996,
-  job: "Teacher",
-  friends: ["Micheal", "Steven", "Peter"],
-};
-console.log(jonas);
+// const jonas = {
+//   firstName: "Jonas",
+//   lastName: "Pojary",
+//   age: 2037 - 1996,
+//   job: "Teacher",
+//   friends: ["Micheal", "Steven", "Peter"],
+// };
+// // console.log(jonas);
 
-console.log(jonas.lastName);
-console.log(jonas["lastName"]);
+// // console.log(jonas.lastName);
+// // console.log(jonas["lastName"]);
 
-//challenge
-console.log(
-  `${jonas.firstName} has ${jonas.friends.length} friends , and his bestfriend is ${jonas.friends[0]}`
-);
+// // //challenge
+// // console.log(
+// //   `${jonas.firstName} has ${jonas.friends.length} friends , and his bestfriend is ${jonas.friends[0]}`
+// // );
+
+// const jonas = {
+//   firstName: "Jonas",
+//   lastName: "Pojary",
+//   age: 2037 - 1996,
+//   job: "Teacher",
+//   friends: ["Micheal", "Steven", "Peter"],
+// };
+// console.log(jonas);

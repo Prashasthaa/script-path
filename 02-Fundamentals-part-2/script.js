@@ -462,3 +462,27 @@ console.log(ages);
 
 // countine and break
 */
+
+const jonas = [
+  "Jonas",
+  "Pojary",
+  2037 - 1996,
+  "Teacher",
+  ["Micheal", "Steven", "Peter"],
+  true,
+];
+let arr = [];
+
+console.log("--countiue---");
+
+for (let i = 0; i < jonas.length; i++) {
+  if (typeof jonas[i] === "string") continue;
+  console.log(jonas[i]);
+}
+
+console.log("--break--");
+
+for (let i = 0; i < jonas.length; i++) {
+  if (typeof jonas[i] === "number") break;
+  console.log(jonas[i]);
+}

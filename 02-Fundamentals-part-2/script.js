@@ -508,3 +508,10 @@ console.log(ages);
 //     }
 //   }
 // }
+
+//while loop
+let i = 10;
+while (i >= 0) {
+  console.log(`level ${i}`);
+  i -= 1;
+}

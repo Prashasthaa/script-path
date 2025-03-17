@@ -499,12 +499,12 @@ console.log(ages);
 //   console.log(jonas[i]);
 // }
 
-for (let i = 1; i < 4; i++) {
-  console.log(`---level ${i}-----`);
-  for (let j = 1; j < 4; j++) {
-    console.log(`__level ${j}_______`);
-    for (let k = 0; k < 2; k++) {
-      console.log(`level ${k}`);
-    }
-  }
-}
+// for (let i = 1; i < 4; i++) {
+//   console.log(`---level ${i}-----`);
+//   for (let j = 1; j < 4; j++) {
+//     console.log(`__level ${j}_______`);
+//     for (let k = 0; k < 2; k++) {
+//       console.log(`level ${k}`);
+//     }
+//   }
+// }

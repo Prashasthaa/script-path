@@ -528,25 +528,52 @@ const restaurant = {
   categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
   starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
   mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+  openingHours: {
+    thu: {
+      open: 12,
+      close: 22,
+    },
+    fri: {
+      open: 11,
+      close: 23,
+    },
+    sat: {
+      open: 0, // Open 24 hours
+      close: 24,
+    },
+  },
   order: function (starterIndex, mainIndex) {
     return [this.starterMenu[starterIndex], this.mainMenu[mainIndex]];
   },
 };
 
-const arr = [2, 3, 4];
+const { name, openingHours, categories } = restaurant;
+console.log(name, openingHours, categories);
 
-const b = arr[0];
-const c = arr[1];
-const d = arr[2];
+const {
+  name: restaurantName,
+  openingHours: hours,
+  categories: tags,
+} = restaurant;
+console.log(restaurantName, hours, tags);
 
-const [x, y, z] = arr;
+const { menu = [], starterMenu: starter = [] } = restaurant;
+console.log(menu, starter);
 
-console.log(x, y, z);
+// const arr = [2, 3, 4];
 
-console.log(arr);
+// const b = arr[0];
+// const c = arr[1];
+// const d = arr[2];
 
-let [main, , secondary] = restaurant.categories;
-console.log(main, secondary);
+// const [x, y, z] = arr;
+
+// console.log(x, y, z);
+
+// console.log(arr);
+
+// let [main, , secondary] = restaurant.categories;
+// console.log(main, secondary);
 
 //swithcing varibles
 // let temp = main;
@@ -554,6 +581,20 @@ console.log(main, secondary);
 // secondary = temp;
 // console.log(main, secondary);
 
-[main, secondary] = [secondary, main];
-console.log(main, secondary);
-const [starter, main] = restaurant.order(2, 0);
+// [main, secondary] = [secondary, main];
+// console.log(main, secondary);
+
+// //Recive 2 return values from function
+// const [starter, main] = restaurant.order(2, 0);
+// console.log(starter, main);
+
+// //nested destructuring
+// const nested = [2, 4, [5, 6]];
+// // const [i, , j] = nested;
+// // console.log(i, j);
+// const [i, , [j, k]] = nested;
+// console.log(i, j, k);
+
+// //default values
+// const [p = 1, q = 1, r = 1] = [, 8, 9];
+// console.log(p, q, r);

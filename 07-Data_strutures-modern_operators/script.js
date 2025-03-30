@@ -560,70 +560,104 @@ const restaurant = {
   },
 };
 
-const arr = [7, 8, 5];
+//Spread beacause on right side of =
+const arr = [1, 2, ...[3, 4]];
 
-const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
-console.log(badNewArr);
+//ResT , because on left side of =
+const [a, b, ...others] = [1, 2, 3, 4, 5];
+console.log(a, b, others);
 
-const newArr = [1, 2, ...arr];
-console.log(newArr);
+const [pizza, , risotto, ...otherFood] = [
+  ...restaurant.mainMenu,
+  ...restaurant.starterMenu,
+];
+console.log(pizza, risotto, otherFood);
 
-console.log(...newArr);
+//objects
+const { sat, ...weekdays } = restaurant.openingHours;
+console.log(weekdays);
 
-const newMenu = [...restaurant.mainMenu, 'Gnocci'];
-console.log(newMenu);
+//2 functions
+const add = function (...numbers) {
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  console.log(sum);
+};
+add(2, 3);
+add(5, 3, 7, 2);
+add(5, 3, 7, 2, 6, 7, 7, 8);
 
-//copy array
-const mainMenuCopy = [...restaurant.mainMenu];
-console.log(mainMenuCopy);
+const x = [2, 3, 4];
+add(...x);
 
-//Join 2 arrays
-const menu = [...restaurant.mainMenu, ...restaurant.starterMenu];
-console.log(menu);
+/*
+// //Spread Operator
+// const arr = [7, 8, 5];
 
-//iterables : arrays , string , maps ,sets,NOt object
+// const badNewArr = [1, 2, arr[0], arr[1], arr[2]];
+// console.log(badNewArr);
 
-const str = 'Jonas';
-const letters = [...str, '', 'S.'];
-console.log(letters);
-console.log(...str);
-/*console.log(`${...str}`);*/
+// const newArr = [1, 2, ...arr];
+// console.log(newArr);
 
-restaurant.orderDelivery({
-  time: '22:30',
-  address: 'Via del Sole, 21',
-  mainIndex: 2,
-  starterIndex: 2,
-});
+// console.log(...newArr);
 
-const { name, openingHours, categories } = restaurant;
-console.log(name, openingHours, categories);
+// const newMenu = [...restaurant.mainMenu, 'Gnocci'];
+// console.log(newMenu);
 
-const {
-  name: restaurantName,
-  openingHours: hours,
-  categories: tags,
-} = restaurant;
-console.log(restaurantName, hours, tags);
+// //copy array
+// const mainMenuCopy = [...restaurant.mainMenu];
+// console.log(mainMenuCopy);
 
-// //Real World example
+// //Join 2 arrays
+// const menu = [...restaurant.mainMenu, ...restaurant.starterMenu];
+// console.log(menu);
 
-// const ingredients = [
-//   prompt("Let's make pasta ! Ingredient 1?"),
-//   prompt('Ingredient 2 ?'),
-//   prompt('Ingredient 3 ?'),
-// ];
-// console.log(ingredients);
-// console.log(ingredients[0], ingredients[1], ingredients[2]);
-// console.log(...ingredients);
+// //iterables : arrays , string , maps ,sets,NOt object
 
-//Objects
-const newRestaurant = { foundedIn: 1998, ...restaurant, founder: 'Harshith' };
-console.log(newRestaurant);
+// const str = 'Jonas';
+// const letters = [...str, '', 'S.'];
+// console.log(letters);
+// console.log(...str);
+// /*console.log(`${...str}`);*/
 
-const restaurantCopy = { ...restaurant };
-restaurantCopy.name = 'Ristorante Roma';
-console.log(restaurantCopy.name, restaurant.name);
+// restaurant.orderDelivery({
+//   time: '22:30',
+//   address: 'Via del Sole, 21',
+//   mainIndex: 2,
+//   starterIndex: 2,
+// });
+
+// const { name, openingHours, categories } = restaurant;
+// console.log(name, openingHours, categories);
+
+// const {
+//   name: restaurantName,
+//   openingHours: hours,
+//   categories: tags,
+// } = restaurant;
+// console.log(restaurantName, hours, tags);
+
+// // //Real World example
+
+// // const ingredients = [
+// //   prompt("Let's make pasta ! Ingredient 1?"),
+// //   prompt('Ingredient 2 ?'),
+// //   prompt('Ingredient 3 ?'),
+// // ];
+// // console.log(ingredients);
+// // console.log(ingredients[0], ingredients[1], ingredients[2]);
+// // console.log(...ingredients);
+
+// //Objects
+// const newRestaurant = { foundedIn: 1998, ...restaurant, founder: 'Harshith' };
+// console.log(newRestaurant);
+
+// const restaurantCopy = { ...restaurant };
+// restaurantCopy.name = 'Ristorante Roma';
+// console.log(restaurantCopy.name, restaurant.name);
 
 // //Default values
 // const { menu = [], starterMenu: starter = [] } = restaurant;

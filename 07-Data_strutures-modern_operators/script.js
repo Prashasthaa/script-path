@@ -560,37 +560,40 @@ const restaurant = {
   },
 };
 
-//Spread beacause on right side of =
-const arr = [1, 2, ...[3, 4]];
+////////////////////////////////////////////////////
+///////////////////////////////////////////////////
 
-//ResT , because on left side of =
-const [a, b, ...others] = [1, 2, 3, 4, 5];
-console.log(a, b, others);
+// //Spread beacause on right side of =
+// const arr = [1, 2, ...[3, 4]];
 
-const [pizza, , risotto, ...otherFood] = [
-  ...restaurant.mainMenu,
-  ...restaurant.starterMenu,
-];
-console.log(pizza, risotto, otherFood);
+// //ResT , because on left side of =
+// const [a, b, ...others] = [1, 2, 3, 4, 5];
+// console.log(a, b, others);
 
-//objects
-const { sat, ...weekdays } = restaurant.openingHours;
-console.log(weekdays);
+// const [pizza, , risotto, ...otherFood] = [
+//   ...restaurant.mainMenu,
+//   ...restaurant.starterMenu,
+// ];
+// console.log(pizza, risotto, otherFood);
 
-//2 functions
-const add = function (...numbers) {
-  let sum = 0;
-  for (let i = 0; i < numbers.length; i++) {
-    sum += numbers[i];
-  }
-  console.log(sum);
-};
-add(2, 3);
-add(5, 3, 7, 2);
-add(5, 3, 7, 2, 6, 7, 7, 8);
+// //objects
+// const { sat, ...weekdays } = restaurant.openingHours;
+// console.log(weekdays);
 
-const x = [2, 3, 4];
-add(...x);
+// //2 functions
+// const add = function (...numbers) {
+//   let sum = 0;
+//   for (let i = 0; i < numbers.length; i++) {
+//     sum += numbers[i];
+//   }
+//   console.log(sum);
+// };
+// add(2, 3);
+// add(5, 3, 7, 2);
+// add(5, 3, 7, 2, 6, 7, 7, 8);
+
+// const x = [2, 3, 4];
+// add(...x);
 
 /*
 // //Spread Operator

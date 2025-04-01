@@ -560,6 +560,28 @@ const restaurant = {
   },
 };
 
+//short circuiting
+console.log('===========OR==========');
+
+//truthy
+console.log(3 || 'Prashastha');
+console.log('Prashastha' || 3);
+console.log('' || 3);
+console.log(true || 0);
+console.log(undefined || null);
+console.log(null || undefined);
+
+const guests1 = restaurant.numGuest ? restaurant.numGuest : 10;
+
+console.log('===========AND==========');
+
+console.log(3 && 'Prashastha');
+console.log('Prashastha' && 3);
+console.log('' && 3);
+console.log(true && 0);
+console.log(undefined && null);
+console.log(null && undefined);
+
 ////////////////////////////////////////////////////
 ///////////////////////////////////////////////////
 

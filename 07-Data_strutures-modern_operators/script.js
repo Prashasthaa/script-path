@@ -564,7 +564,7 @@ const menu = [...restaurant.starterMenu, ...restaurant.mainMenu];
 
 //==========>>for of loop
 for (const item of menu) console.log(item);
-for (const item of menu.entries()) console.log(`${item[0] + 1}:${item[1]} `);
+for (const [i, el] of menu.entries()) console.log(`${i + 1}:${el} `);
 
 //console.log([...menu.entries()]);
 

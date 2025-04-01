@@ -560,27 +560,46 @@ const restaurant = {
   },
 };
 
-//short circuiting
-console.log('===========OR==========');
+const rest1 = {
+  name: 'Capri',
+  numGuests: 20,
+};
 
-//truthy
-console.log(3 || 'Prashastha');
-console.log('Prashastha' || 3);
-console.log('' || 3);
-console.log(true || 0);
-console.log(undefined || null);
-console.log(null || undefined);
+const rest2 = {
+  name: 'La Piazza',
+  owner: 'Giovanni Rossi',
+};
 
-const guests1 = restaurant.numGuest ? restaurant.numGuest : 10;
+rest2.numGuests = rest2.numGuests || 10;
+rest1.numGuests = rest1.numGuests || 10;
 
-console.log('===========AND==========');
+console.log(rest1);
+console.log(rest2);
 
-console.log(3 && 'Prashastha');
-console.log('Prashastha' && 3);
-console.log('' && 3);
-console.log(true && 0);
-console.log(undefined && null);
-console.log(null && undefined);
+//===========================
+//////===============================
+
+// //short circuiting
+// console.log('===========OR==========');
+
+// //truthy
+// console.log(3 || 'Prashastha');
+// console.log('Prashastha' || 3);
+// console.log('' || 3);
+// console.log(true || 0);
+// console.log(undefined || null);
+// console.log(null || undefined);
+
+// const guests1 = restaurant.numGuest ? restaurant.numGuest : 10;
+
+// console.log('===========AND==========');
+
+// console.log(3 && 'Prashastha');
+// console.log('Prashastha' && 3);
+// console.log('' && 3);
+// console.log(true && 0);
+// console.log(undefined && null);
+// console.log(null && undefined);
 
 ////////////////////////////////////////////////////
 ///////////////////////////////////////////////////

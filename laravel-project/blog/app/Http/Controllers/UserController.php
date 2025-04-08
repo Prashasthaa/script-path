@@ -8,13 +8,21 @@ use Illuminate\Support\Facades\View;
 class UserController extends Controller
 {
     //
-    function home(){
-       
-        return view('home');
-    }
+    function addUser(Request $request){
+        $request->validate([
+            'username'=>'required | min:3| max:10',
+            'email'=>'required | email',
+            'city'=>'required | min:3| max:20 | uppercase',
+            
 
-    function userAbout(){
-       
-        return view('about');
+        ],[
+            'username.required'=>'User name can not be empty',
+            'username.min'=>'User name min  charcaters should be 3',
+            'username.max'=>'User name max  charcaters limit is 15',
+            'email.required'=>'Email can not be empty',
+            'email.email'=>'Enter valid email address',
+            'city.uppercase'=>'characters must be uppercase',
+        ]);
+        return $request;
     }
 }

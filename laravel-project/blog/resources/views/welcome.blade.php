@@ -1,6 +1,5 @@
 <h1>Welcome Page</h1>
-<a href="{{URL::to('about')}}">About Page</a>
+<a href="{{route('hm')}}">Go to Home Page</a>
 <br>
+<a href="home/profile/prashastha">Go to Prashastha Profile</a>
 
-<a href="{{URL::to('home')}}">home Page</a><br>
-<a href="{{URL::to('about',['Prashastha'])}}">home Page</a>

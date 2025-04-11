@@ -1,24 +1,19 @@
+
 <div>
-    <h1>users list</h1>
-  
-<table border="1">
-    <tr>
-        <td>ID</td>
-        <td>Name</td>
-        <td>Email</td>
-        <td>Phone</td>
-    </tr>
-    <tr>
-        @foreach($users as $user)
+    <h1>USers</h1>
+    <table border="1">
         <tr>
-            <td>{{$user->id}}</td>
+            <th>Name</th>
+            <th>email</th>
+            <th>Phone</th>
+        </tr>
+        @foreach($users as $user)
+      <tr>
             <td>{{$user->name}}</td>
             <td>{{$user->email}}</td>
-            <td>{{$user->phone}}</td>
-        </tr>
+            <td>{{$user->phone}}</td> 
+      </tr>
         @endforeach
-    </tr>
-</table>
-
-    <!-- Because you are alive, everything is possible. - Thich Nhat Hanh -->
+  
+    </table>
 </div>

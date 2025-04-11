@@ -1,6 +1,6 @@
 <div>
     <h1>Student list</h1>
-    <table border="1">
+    <table border="5">
     <tr>
         <td>id</td>
         <td>Name</td>

@@ -1,12 +1,13 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\UsersController;
+// use App\Http\Controllers\UserController;
 // use App\Http\Controllers\HomeController;
 // use App\Http\Controllers\StudentaController;
-use App\Http\Controllers\StudentController;
-use App\Http\Middleware\AgeCheck;
-use App\Http\Middleware\CountryCheck;
+// use App\Http\Controllers\StudentController;
+// use App\Http\Middleware\AgeCheck;
+// use App\Http\Middleware\CountryCheck;
 
 
 
@@ -14,7 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/students',[StudentController::class,'getStudents']);
+Route::get('users',[UsersController::class,'queries']);
+
+
+// Route::get('users',[UserController::class,'getUser']);
+
+// Route::get('/students',[StudentController::class,'getStudents']);
 
 // Route::get('users',[UserController::class,'users']);
 

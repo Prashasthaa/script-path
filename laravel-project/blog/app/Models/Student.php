@@ -6,6 +6,9 @@ use Illuminate\Database\Eloquent\Model;
 
 class Student extends Model
 {
-    //
-    protected $table= "students";
+   
+     // protected $table= "collg_students";
+    function  testFun(){
+        return "this is dummy function";
+    }
 }

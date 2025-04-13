@@ -2,7 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UsersController;
-// use App\Http\Controllers\UserController;
+use App\Http\Controllers\UserController;
 // use App\Http\Controllers\HomeController;
 // use App\Http\Controllers\StudentaController;
 // use App\Http\Controllers\StudentController;
@@ -12,10 +12,13 @@ use App\Http\Controllers\UsersController;
 
 
 Route::get('/', function () {
+    
     return view('welcome');
 });
 
-Route::get('users',[UsersController::class,'queries']);
+Route::get('user',[UserController::class,'queries']);
+
+// Route::get('users',[UsersController::class,'queries']);
 
 
 // Route::get('users',[UserController::class,'getUser']);

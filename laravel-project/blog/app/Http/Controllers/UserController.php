@@ -4,17 +4,40 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
+use App\Models\USer;
 // use Illuminate\Support\Facades\View;
 // use Illuminate\Support\Facades\DB;
 
 
 class UserController extends Controller
 {
-    function getUSer(){
-        $response=Http::get('https://jsonplaceholder.typicode.com/users/1');
-        $response =$response->body();
-        return view('users',['data'=>json_decode($response)]);
+    function queries(){
+        // $response=User::get();
+        // $response=User::all();
+
+        // $response=USer::insert([
+        //     'name'=>'kaay',
+        //     'email'=>'kay@test.com',
+        //     'phone'=>'5645654'
+        // ]);
+        // if($response){
+        //     return "Data isnserted";
+        // }
+        // else{
+        //     return "Error in inserting ";
+        // }
+
+           $response=USer::where('name','kaay');
+
+        return view('user',['users'=>$response]);
+
     }
+
+    // function getUSer(){
+    //     $response=Http::get('https://jsonplaceholder.typicode.com/users/1');
+    //     $response =$response->body();
+    //     return view('users',['data'=>json_decode($response)]);
+    // }
 
     // function users(){
     //     $users= DB::select('select * from users');

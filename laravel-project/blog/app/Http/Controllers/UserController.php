@@ -11,7 +11,23 @@ use App\Models\USer;
 
 class UserController extends Controller
 {
-    function queries(){
+
+    function get(){
+        return "get method";
+    }
+    function post(){
+        return "post method";
+    }
+    function put(){
+        return "Put method";
+    }
+    function delete(){
+        return "Delete";
+    }
+
+
+
+    // function queries(){
         // $response=User::get();
         // $response=User::all();
 
@@ -27,11 +43,11 @@ class UserController extends Controller
         //     return "Error in inserting ";
         // }
 
-           $response=USer::where('name','kaay');
+        //    $response=USer::where('name','kaay');
 
-        return view('user',['users'=>$response]);
+        // return view('user',['users'=>$response]);
 
-    }
+    // }
 
     // function getUSer(){
     //     $response=Http::get('https://jsonplaceholder.typicode.com/users/1');

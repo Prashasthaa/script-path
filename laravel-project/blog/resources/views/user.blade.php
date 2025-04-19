@@ -2,7 +2,7 @@
     <h1>User form</h1>
 
     <form action="/user" method="post">
-        <input type="hidden" name="_method"  value="delete">
+        <!-- <input type="hidden" name="_method"  value="PUT"> -->
         @csrf
         <input type="text" name="user" placeholder="Enter user name">
         <br><br>

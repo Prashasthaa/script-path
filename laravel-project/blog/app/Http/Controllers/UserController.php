@@ -12,18 +12,39 @@ use App\Models\USer;
 class UserController extends Controller
 {
 
-    function get(){
-        return "get method";
+    function login(Request $req){
+        echo "Request method is " . $req->method();
+        echo "<br>";
+        echo "Path is ".$req->path();
+        echo "<br>";
+        echo "name is ".$req->input('name');
+        echo "<br>";
+        echo "Password is ".$req->input('password');
     }
-    function post(){
-        return "post method";
-    }
-    function put(){
-        return "Put method";
-    }
-    function delete(){
-        return "Delete";
-    }
+
+
+    // function get(){
+    //     return "get method";
+    // }
+    // function post(){
+    //     return "post method";
+    // }
+    // function put(){
+    //     return "Put method";
+    // }
+    // function delete(){
+    //     return "Delete";
+    // }
+    // function any(){
+    //     return "This is any method";
+    // }
+
+    // function group1(){
+    //     return "This is group1 method";
+    // }
+    // function group2(){
+    //     return "This is group2 method";
+    // }
 
 
 

@@ -15,12 +15,21 @@ Route::get('/', function () {
     
     return view('welcome');
 });
-
-Route::get('user',[UserController::class,'get']);
-Route::post('user',[UserController::class,'post']);
-Route::put('user',[UserController::class,'put']);
-Route::delete('user',[UserController::class,'delete']);
+ Route::post('user',[UserController::class,'login']);
 Route::view('form','user');
+
+// Route::match(['post','get','put','delete',],'/user',[UserController::class,'group1']);
+// Route::match(['put','delete',],'/user',[UserController::class,'group2']);
+
+// Route::view('form','user');
+
+// Route::get('user',[UserController::class,'get']);
+// Route::post('user',[UserController::class,'post']);
+// Route::put('user',[UserController::class,'put']);
+// Route::delete('user',[UserController::class,'delete']);
+
+// Route::any('user',[UserController::class,'any']);
+
 
 // Route::get('users',[UsersController::class,'queries']);
 

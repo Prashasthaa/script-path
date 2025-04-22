@@ -12,11 +12,17 @@ use App\Http\Controllers\UserController;
 
 
 Route::get('/', function () {
-    
     return view('welcome');
 });
- Route::post('user',[UserController::class,'login']);
-Route::view('form','user');
+
+Route::view('login','login');
+Route::view('profile','profile');
+
+Route::post('login',[UserController::class,'login']);
+Route::get('logout',[UserController::class,'logout']);
+
+//  Route::post('user',[UserController::class,'login']);
+// Route::view('form','user');
 
 // Route::match(['post','get','put','delete',],'/user',[UserController::class,'group1']);
 // Route::match(['put','delete',],'/user',[UserController::class,'group2']);

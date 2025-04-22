@@ -12,15 +12,27 @@ use App\Models\USer;
 class UserController extends Controller
 {
 
-    function login(Request $req){
-        echo "Request method is " . $req->method();
-        echo "<br>";
-        echo "Path is ".$req->path();
-        echo "<br>";
-        echo "name is ".$req->input('name');
-        echo "<br>";
-        echo "Password is ".$req->input('password');
+    function login(Request $request){
+        $request->session()->put('user',$request->input('user'));
+       $request->session()->put('allData',$request->input());
+    
+        return redirect('profile');
     }
+
+    function logout(){
+        session()->pull('user');
+        return redirect('profile');
+    }
+
+    // function login(Request $req){
+    //     echo "Request method is " . $req->method();
+    //     echo "<br>";
+    //     echo "Path is ".$req->path();
+    //     echo "<br>";
+    //     echo "name is ".$req->input('name');
+    //     echo "<br>";
+    //     echo "Password is ".$req->input('password');
+    // }
 
 
     // function get(){

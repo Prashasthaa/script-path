@@ -15,11 +15,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::view('login','login');
-Route::view('profile','profile');
+Route::post('add',[UserController::class,'addUser']);
+Route::view('user','user');
 
-Route::post('login',[UserController::class,'login']);
-Route::get('logout',[UserController::class,'logout']);
+
+// Route::view('login','login');
+// Route::view('profile','profile');
+
+// Route::post('login',[UserController::class,'login']);
+// Route::get('logout',[UserController::class,'logout']);
 
 //  Route::post('user',[UserController::class,'login']);
 // Route::view('form','user');

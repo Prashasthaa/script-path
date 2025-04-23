@@ -12,17 +12,26 @@ use App\Models\USer;
 class UserController extends Controller
 {
 
-    function login(Request $request){
-        $request->session()->put('user',$request->input('user'));
-       $request->session()->put('allData',$request->input());
-    
-        return redirect('profile');
+    function addUser(Request $req){
+        //your db code
+        $req->session()->flash("message","User has been added sucessfully");
+        $req->session()->flash("name",($req->username));
+        return redirect('user');
     }
 
-    function logout(){
-        session()->pull('user');
-        return redirect('profile');
-    }
+
+
+    // function login(Request $request){
+    //     $request->session()->put('user',$request->input('user'));
+    //    $request->session()->put('allData',$request->input());
+    
+    //     return redirect('profile');
+    // }
+
+    // function logout(){
+    //     session()->pull('user');
+    //     return redirect('profile');
+    // }
 
     // function login(Request $req){
     //     echo "Request method is " . $req->method();

@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UploadController;
 // use App\Http\Controllers\UsersController;
 use App\Http\Controllers\UserController;
 // use App\Http\Controllers\HomeController;
@@ -15,8 +16,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::post('add',[UserController::class,'addUser']);
-Route::view('user','user');
+Route::view('upload','upload');
+Route::post('upload',[UploadController::class,'upload']);
+
+
+// Route::post('add',[UserController::class,'addUser']);
+// Route::view('user','user');
 
 
 // Route::view('login','login');

@@ -15,7 +15,7 @@ class UserController extends Controller
     function addUser(Request $req){
         //your db code
         $req->session()->flash("message","User has been added sucessfully");
-        $req->session()->flash("name",($req->username));
+        $req->session()->flash("name",($req->username)); 
         return redirect('user');
     }
 

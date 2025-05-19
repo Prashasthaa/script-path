@@ -10,7 +10,7 @@ import jakarta.json.*;
 
 @WebServlet("/weather")
 public class WeatherServlet extends HttpServlet {
-    private static final String API_KEY = "a09ae1cf07331d2a1b6382fa40b1d9e5"; // OpenWeather API key
+    private static final String API_KEY = ""; // OpenWeather API key
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)

@@ -1,19 +1,26 @@
 import java.util.Scanner;
 
 public class ArrayCC {
+
+    public static void updateMarks(int marks[]) {
+        for (int i = 0; i < marks.length; i++) {
+            marks[i] = marks[i] + 1;
+        }
+    }
+
     public static void main(String[] args) {
-        int marks[] = new int[50];
+        // int marks[] = new int[50];
 
         // int numbers[] = { 1, 2, 3 };
 
         // String fruits[] = { "apple", "orange" };
 
-        Scanner sc = new Scanner(System.in);
+        // Scanner sc = new Scanner(System.in);
 
         // int phy;
         // phy = sc.nextInt();
 
-        System.out.println("Length of array : " + marks.length);
+        // System.out.println("Length of array : " + marks.length);
 
         // marks[0] = sc.nextInt();
         // marks[1] = sc.nextInt();
@@ -24,5 +31,11 @@ public class ArrayCC {
         // System.out.println("Math : " + marks[2]);
 
         // sc.close();
+        int marks[] = { 97, 98, 99 };
+        updateMarks(marks);
+
+        for (int i = 0; i < marks.length; i++) {
+            System.out.println(marks[i]);
+        }
     }
 }

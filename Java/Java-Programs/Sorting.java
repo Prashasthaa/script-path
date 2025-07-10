@@ -1,7 +1,10 @@
+import java.util.Arrays;
+import java.util.Collections;
+
 public class Sorting {
 
     // Print Array
-    public static void print_array(int[] arr) {
+    public static void print_array(Integer[] arr) {
         System.out.println(" SORTED :");
         for (int num : arr) {
             System.out.print(num + " ");
@@ -9,7 +12,7 @@ public class Sorting {
     }
 
     // Bubble Sort
-    public static void bubbleSort(int arr[]) {
+    public static void bubbleSort(Integer arr[]) {
 
         for (int i = 0; i < arr.length; i++) {
             for (int j = 0; j < arr.length - 1 - i; j++) {
@@ -22,11 +25,11 @@ public class Sorting {
                 }
             }
         }
-        print_array(arr);
+
     }
 
     // Selection Sort
-    public static void selectionSort(int[] arr) {
+    public static void selectionSort(Integer[] arr) {
 
         for (int i = 0; i < arr.length; i++) {
             int min = i;
@@ -41,10 +44,10 @@ public class Sorting {
             arr[i] = temp;
 
         }
-        print_array(arr);
+
     }
 
-    public static void insertionSort(int[] arr) {
+    public static void insertionSort(Integer[] arr) {
         for (int i = 1; i < arr.length; i++) {
             int curr = arr[i];
             int prev = i - 1;
@@ -56,14 +59,30 @@ public class Sorting {
             // insesrtion
             arr[prev + 1] = curr;
         }
-        print_array(arr);
+    }
+
+    public static int compare(int a, int b) {
+        // a > b -ve
+        // a == b 0
+        // a < b +ve
+        return a - b;
+
     }
 
     public static void main(String args[]) {
-        int arr[] = { 5, 4, 1, 3, 2 };
+        Integer arr[] = { 5, 4, 1, 3, 2 };
         // bubbleSort(arr);
-        // selectionSort(arr);
-        insertionSort(arr);
 
+        // selectionSort(arr);
+
+        // insertionSort(arr);
+
+        // builtin sort
+        // Arrays.sort(arr, 1, 5);
+        // Arrays.sort(arr, Collections.reverseOrder());
+        // Arrays.sort(arr, 1, 5, Collections.reverseOrder());
+        // Arrays.sort(arr, 0, 3, Collections.reverseOrder());
+
+        print_array(arr);
     }
 }

@@ -4,11 +4,12 @@ import viteLogo from "/vite.svg";
 import "./App.css";
 import LudoBoard from "./LudoBoard";
 import TodoList from "./TodoList";
+import LotteryTicket from "./LotteryTicket";
 
 function App() {
   return (
     <>
-      <TodoList />
+      <LotteryTicket />
     </>
   );
 }

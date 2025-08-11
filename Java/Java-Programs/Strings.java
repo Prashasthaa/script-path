@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.*;
 
 public class Strings {
@@ -85,6 +86,70 @@ public class Strings {
         return newStr;
     }
 
+    public static String stringBuilderCompress(String str) {
+        StringBuilder newStr = new StringBuilder("");
+
+        for (int i = 0; i < str.length(); i++) {
+            Integer count = 1;
+            while (i < str.length() - 1 && str.charAt(i) == str.charAt(i + 1)) {
+                count++;
+                i++;
+            }
+            newStr.append(str.charAt(i));
+            if (count > 1) {
+                newStr.append(count);
+            }
+        }
+
+        return newStr.toString();
+
+    }
+
+    public static int countOfLowerString(String str) {
+        int count = 0;
+        char[] vowels = { 'a', 'e', 'i', 'o', 'u' };
+
+        for (int i = 0; i < str.length(); i++) {
+            for (int j = 0; j < vowels.length; j++) {
+                if (str.charAt(i) == vowels[j]) {
+                    count++;
+                }
+            }
+        }
+
+        return count;
+    }
+
+    public static boolean anagrams(String str1, String str2) {
+        boolean flag = true;
+
+        return flag;
+    }
+
+    public static String stringSort(String str) {
+        char[] strArray = str.toCharArray();
+        Arrays.sort(strArray);
+        return new String(strArray);
+
+    }
+
+    public static boolean isAnagrams(String str1, String str2) {
+        if (str1.length() != str2.length()) {
+            return false;
+        }
+        str1 = stringSort(str1);
+        str2 = stringSort(str2);
+        for (int i = 0; i < str1.length(); i++) {
+
+            if (str1.charAt(i) != str2.charAt(i)) {
+                return false;
+            }
+
+        }
+
+        return true;
+    }
+
     public static void main(String args[]) {
         // char arr[] = { 'a', 'b', 'c', 'd' };
         // String str = "abcd";
@@ -166,9 +231,14 @@ public class Strings {
         // System.out.println(toUpperCase(str));
 
         // String Compressor
-        String str = "abcd";
-        // String str = "aaabbcccdd";
-        System.out.println(stringCompress(str));
+        // String str = "abcd";
+        // String str = "aAaabbcccddiiiii";
+        // System.out.println(stringCompress(str));
+        // System.out.println(stringBuilderCompress(str));
+        // System.out.println(countOfLowerString(str));
 
+        // anagrams
+        // System.out.println(stringSort("null"));
+        System.out.println(isAnagrams("cara", "raec"));
     }
 }

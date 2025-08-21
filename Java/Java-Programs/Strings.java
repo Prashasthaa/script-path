@@ -120,12 +120,6 @@ public class Strings {
         return count;
     }
 
-    public static boolean anagrams(String str1, String str2) {
-        boolean flag = true;
-
-        return flag;
-    }
-
     public static String stringSort(String str) {
         char[] strArray = str.toCharArray();
         Arrays.sort(strArray);
@@ -148,6 +142,20 @@ public class Strings {
         }
 
         return true;
+    }
+
+    public static boolean isVowel(char ch) {
+        return (ch == 'a' || ch == 'e' || ch == 'i' || ch == 'o' || ch == 'u');
+    }
+
+    public static int countOfVowel(String str) {
+        int count = 0;
+        for (int i = 0; i < str.length(); i++) {
+            char ch = str.charAt(i);
+            if (isVowel(ch))
+                count++;
+        }
+        return count;
     }
 
     public static void main(String args[]) {
@@ -239,6 +247,9 @@ public class Strings {
 
         // anagrams
         // System.out.println(stringSort("null"));
-        System.out.println(isAnagrams("cara", "raec"));
+        // System.out.println(isAnagrams("cara", "raec"));
+
+        String str = "aAaabbcccddiiiii";
+        System.out.println(countOfVowel(str));
     }
 }

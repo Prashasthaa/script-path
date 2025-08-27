@@ -82,6 +82,27 @@ public class BitManipulation {
         return count;
     }
 
+    public static int fastExponential(int a, int n) {
+        int ans = 1;
+        while (n > 0) {
+            if ((n & 1) != 0) {// check LSB
+                ans = ans * a;
+
+            }
+            a = a * a;
+            n = n >> 1;
+        }
+        return ans;
+    }
+
+    public static void swap(int a, int b) {
+        System.out.println("intaily a=" + a + " b=" + b);
+        a = a ^ b;
+        b = a ^ b;
+        a = a ^ b;
+        System.out.println("after swap a=" + a + " b=" + b);
+    }
+
     public static void main(String args[]) {
 
         // bitwise And &
@@ -122,6 +143,11 @@ public class BitManipulation {
 
         // System.out.println(powerOfTwo(18));
 
-        System.out.println(countsBit(15));
+        // System.out.println(countsBit(15));
+
+        // System.out.println(fastExponential(3, 5));
+
+        swap(15, 9);
+
     }
 }

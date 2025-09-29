@@ -147,7 +147,7 @@ public class BitManipulation {
 
         // System.out.println(fastExponential(3, 5));
 
-        swap(15, 9);
+        // swap(15, 9);
 
     }
 }

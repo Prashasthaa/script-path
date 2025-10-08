@@ -1,41 +1,139 @@
+// constructor
+class Student {
+
+    String name;
+    int roll;
+    String password;
+    int marks[];
+
+    // // shallow copy constructor
+    // Student(Student s1) {
+    // marks = new int[3];
+    // this.name = s1.name;
+    // this.roll = s1.roll;
+    // this.marks = s1.marks;
+    // }
+
+    // deep copy constructor
+    Student(Student s1) {
+        marks = new int[3];
+        this.name = s1.name;
+        this.roll = s1.roll;
+        for (int i = 0; i < 3; i++) {
+            this.marks[i] = s1.marks[i];
+        }
+
+    }
+
+    // Non parameterized constructor
+    Student() {
+        marks = new int[3];
+        System.out.println("Constructor is called");
+    }
+
+    // Parameterized constructor
+    Student(String name) {
+        marks = new int[3];
+        this.name = name;
+    }
+
+    Student(int roll) {
+        marks = new int[3];
+        this.roll = roll;
+    }
+}
+
 public class OOPS {
     public static void main(String args[]) {
-        Pen p1 = new Pen(); // created a pen object called p1
+        // Pen p1 = new Pen(); // created a pen object called p1
 
-        p1.setColor("Blue");
-        System.out.println(p1.color);
+        // p1.setColor("Blue");
+        // System.out.println(p1.getColor());
 
-        p1.setTip(5);
-        System.out.println(p1.tip);
+        // p1.setTip(5);
+        // System.out.println(p1.getTip());
 
-        p1.color = "Yellow";
-        System.out.println(p1.color);
+        // p1.setColor("Yellow");
+        // System.out.println(p1.getColor());
+
+        // BankAccount myAcc = new BankAccount();
+        // myAcc.username = "Prashastha";
+
+        // myAcc.password = "abcdefg";
+        // error:The field BankAccount.password is not visible
+
+        // myAcc.setPassword("abcdefg");
+
+        // Parameterized constructor
+        // Student s1 = new Student("Prashastha");
+        // Student s2 = new Student(5);
+
+        // // Non parameterized constructor
+        // Student s3 = new Student();
+
+        // copy constructor
+
+        Student s1 = new Student();
+        s1.name = "prashastha";
+        s1.roll = 432;
+        s1.password = "abcd";
+        s1.marks[0] = 10;
+        s1.marks[1] = 90;
+        s1.marks[2] = 80;
+
+        Student s2 = new Student(s1); // copy
+        s2.password = "xyz";
+        s1.marks[2] = 100;
+
+        for (int i = 0; i < 3; i++) {
+            System.out.println(s2.marks[i]);
+        }
+
+        // System.out.println(s1.name);
 
     }
 }
 
-class Pen {
-    String color;
-    int tip;
+// class Pen {
+// private String color;
+// private int tip;
 
-    void setColor(String newColor) {
-        color = newColor;
-    }
+// String getColor() {
+// return this.color;
+// }
 
-    void setTip(int newTip) {
-        tip = newTip;
+// int getTip() {
+// return this.tip;
+// }
 
-    }
+// void setColor(String newColor) {
+// color = newColor;
+// }
 
-}
+// void setTip(int newTip) {
+// tip = newTip;
 
-class Student {
-    String name;
-    int age;
-    float percentage; // cgpa
+// }
 
-    void calcPercentage(int phy, int chem, int math) {
-        percentage = (phy + chem + math) / 3;
+// }
 
-    }
-}
+// class BankAccount {
+// public String username;
+// private String password;
+
+// public void setPassword(String pwd) {
+// password = pwd;
+// }
+
+// }
+
+// class Student {
+// String name;
+// int age;
+// float percentage; // cgpa
+
+// void calcPercentage(int phy, int chem, int math) {
+// percentage = (phy + chem + math) / 3;
+
+// }
+// }

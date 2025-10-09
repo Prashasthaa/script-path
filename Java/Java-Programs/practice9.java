@@ -453,6 +453,24 @@ public class practice9 {
 // }
 
 // public class program {
+
+// public static void main(String[] args) {
+// Scanner sc = new Scanner(System.in);
+// int n = sc.nextInt();
+
+// float fin = 0;
+// float in = 0;
+// for (int i = n; i >= 1; i--) {
+// fin = in;
+// in = (fin + 100) / 2;
+// }
+// System.out.println("output " + in);
+
+// }
+
+// }
+
+// public class program {
 // int l=0;
 // int findLen(String str,int index){
 

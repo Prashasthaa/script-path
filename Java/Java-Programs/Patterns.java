@@ -52,13 +52,29 @@ public class Patterns {
         }
     }
 
+    static void pattern6(int n) {
+        for (int i = 0; i < 2 * n; i++) {
+
+            int totalColsIn = i > n ? 2 * n - i : i;
+            int noOfSpaces = n - totalColsIn;
+            for (int j = 0; j < noOfSpaces; j++) {
+                System.out.print(" ");
+            }
+            for (int j = 0; j < totalColsIn; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
         int n = 5;
         // pattern1(n);
         // pattern2(n);
         // pattern3(n);
         // pattern4(n);
-        pattern5(n);
+        // pattern5(n);
+        pattern6(n);
     }
 
 }

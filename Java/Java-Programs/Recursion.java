@@ -39,10 +39,8 @@ public class Recursion {
     }
 
     public static int fibonacci(int n) {
-        if (n == 1) {
+        if (n == 1 || n == 0) {
             return 1;
-        } else if (n == 0) {
-            return 0;
         }
         return fibonacci(n - 1) + fibonacci(n - 2);
     }
@@ -134,6 +132,29 @@ public class Recursion {
 
     }
 
+    public static int friendsPairing(int n) {
+
+        // baseCase
+        if (n == 1 || n == 2) {
+            return n;
+        }
+
+        // choices
+
+        // single
+        // int fnm1 = friendsPairing(n - 1);
+
+        // // pair
+        // int fnm2 = friendsPairing(n - 2);
+        // int pairWays = (n - 1) * fnm2;
+
+        // // totalWays
+        // int totalWays = fnm1 + pairWays;
+        // return totalWays;
+
+        return friendsPairing(n - 1) + ((n - 1) * friendsPairing(n - 2));
+    }
+
     public static void main(String[] args) {
         // Scanner sc = new Scanner(System.in);
         // System.out.println("Enter a number:");
@@ -143,6 +164,8 @@ public class Recursion {
         // System.out.println("Factorial of " + n + " is " + printFact(n));
         // System.out.println("Sum of " + n + " numbers is " + printSumOfNum(n));
         // System.out.println("Fibonacci of " + n + "th numbers is " + fibonacci(n));
+
+        // System.out.println(fibonacci(5));
 
         // int arr[] = { 10, 3, 3, 4, 5, 6, 6 };
         // System.out.println(isSorted(arr, 0));
@@ -156,8 +179,11 @@ public class Recursion {
         // System.out.println(tailingProblem(1));
         // System.out.println(tailingProblem(4));
 
-        removeDuplicate("prashastha", 0, new StringBuilder(""), new boolean[26]);
-        removeDuplicate("helloworld", 0, new StringBuilder(""), new boolean[26]);
+        // removeDuplicate("prashastha", 0, new StringBuilder(""), new boolean[26]);
+        // removeDuplicate("helloworld", 0, new StringBuilder(""), new boolean[26]);
+
+        System.out.println(friendsPairing(4));
+        System.out.println(friendsPairing(3));
     }
 
 }

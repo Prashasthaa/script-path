@@ -155,6 +155,123 @@ public class Recursion {
         return friendsPairing(n - 1) + ((n - 1) * friendsPairing(n - 2));
     }
 
+    public static void printBinary(int n, int lastPlace, String str) {
+        if (n == 0) {
+            System.out.println(str);
+            return;
+        }
+
+        printBinary(n - 1, 0, str + "0");
+        if (lastPlace == 0) {
+            printBinary(n - 1, 1, str + "1");
+        }
+
+        // if (lastPlace == 0) {
+        // printBinary(n - 1, 0, str.append("0"));
+        // printBinary(n - 1, 1, str.append("1"));
+
+        // } else {
+        // printBinary(n - 1, 0, str.append("0"));
+        // }
+    }
+
+    public static void indexOfOccurence(int arr[], int key, int n) {
+        if (n == arr.length) {
+            return;
+        }
+        if (arr[n] == key) {
+            System.out.print(n + " ");
+        }
+        indexOfOccurence(arr, key, n + 1);
+    }
+
+    public static void numberToString(int n) {
+        if (n == 0) {
+            return;
+        }
+        numberToString(n / 10);
+        // printString(n);
+        printString(n % 10);
+    }
+
+    public static void printString(int n) {
+        switch (n) {
+            case 1:
+                System.out.print("one ");
+                break;
+            case 2:
+                System.out.print("Two ");
+                break;
+            case 3:
+                System.out.print("Three ");
+                break;
+            case 4:
+                System.out.print("Four ");
+                break;
+            case 5:
+                System.out.print("Five ");
+                break;
+            case 6:
+                System.out.print("Six ");
+                break;
+            case 7:
+                System.out.print("Seven ");
+                break;
+            case 8:
+                System.out.print("Eight ");
+                break;
+            case 9:
+                System.out.print("Nine ");
+                break;
+
+            default:
+                System.out.print("Zero ");
+                break;
+        }
+    }
+
+    public static int lengthOfString(String str) {
+        if (str == null || str == "") {
+            return 0;
+
+        }
+        return lengthOfString(str.substring(1)) + 1;
+    }
+
+    // public static int countOfSubstrings(String str, int n) {
+    // if (n == str.length()) {
+    // return 0;
+    // }
+    // if (str.substring(n, n + 1) == str.substring(n + 1, n + 1)) {
+    // System.out.println(str.substring(n, n + 1));
+    // return countOfSubstrings(str, n + 1) + 1;
+    // }
+    // System.out.println("k");
+    // return countOfSubstrings(str, n + 1) + 1;
+    // }
+
+    public static void towerOfHanoi(int n, String s, String h, String d) {
+        if (n == 1) {
+            System.out.println("transfer disk " + n + " from " + s + " to " + d);
+
+            System.out.println();
+            return;
+        }
+        towerOfHanoi(n - 1, s, d, h);
+        System.out.println("transfer disk " + n + " from " + s + " to " + d);
+
+        towerOfHanoi(n - 1, h, s, d);
+    }
+
+    public static void reverseOfString(String str, int idx) {
+        if (idx == 0) {
+            System.out.print(str.charAt(idx));
+            return;
+        }
+        System.out.print(str.charAt(idx));
+        reverseOfString(str, idx - 1);
+    }
+
     public static void main(String[] args) {
         // Scanner sc = new Scanner(System.in);
         // System.out.println("Enter a number:");
@@ -182,8 +299,28 @@ public class Recursion {
         // removeDuplicate("prashastha", 0, new StringBuilder(""), new boolean[26]);
         // removeDuplicate("helloworld", 0, new StringBuilder(""), new boolean[26]);
 
-        System.out.println(friendsPairing(4));
-        System.out.println(friendsPairing(3));
+        // System.out.println(friendsPairing(4));
+        // System.out.println(friendsPairing(3));
+
+        // printBinary(3, 0, new String(""));
+        // printBinary(2, 0, new String(""));
+
+        // int arr[] = { 6, 3, 3, 4, 5, 6, 6 };
+        // indexOfOccurence(arr, 6, 0);
+
+        // numberToString(123);
+        // numberToString(456789);
+
+        // System.out.println("hello".substring(1));
+        // System.out.println(lengthOfString("prashastha"));
+        // System.out.println(lengthOfString("p"));
+
+        // System.out.println(countOfSubstrings("aba", 0));
+
+        // towerOfHanoi(3, "Source", "helper", "destination");
+        // towerOfHanoi(2, "Source", "helper", "destination");
+
+        reverseOfString("null", "null".length() - 1);
     }
 
 }

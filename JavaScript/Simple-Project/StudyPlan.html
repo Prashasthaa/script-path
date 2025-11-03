@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>7-Day Final Exam Study Plan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@3.7.0/dist/chart.min.js"></script>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap");
+      body {
+        font-family: "Inter", sans-serif;
+      }
+      .chart-container {
+        position: relative;
+        width: 100%;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+        height: 320px;
+        max-height: 400px;
+      }
+      @media (min-width: 768px) {
+        .chart-container {
+          height: 384px;
+        }
+      }
+      .loader {
+        width: 48px;
+        height: 48px;
+        border: 5px solid #fff;
+        border-bottom-color: #073b4c;
+        border-radius: 50%;
+        display: inline-block;
+        box-sizing: border-box;
+        animation: rotation 1s linear infinite;
+      }
+      @keyframes rotation {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+      #ai-results {
+        background-color: #f8f9fa;
+        border: 1px solid #e0e0e0;
+        border-radius: 8px;
+        padding: 16px;
+        margin-top: 16px;
+        min-height: 100px;
+        white-space: pre-wrap;
+        overflow-wrap: break-word;
+      }
+      #ai-results strong {
+        color: #073b4c;
+      }
+    </style>
+  </head>
+  <body class="bg-gray-100 text-gray-800">
+    <!-- Chosen Palette: Energetic & Playful -->
+    <!-- Application Structure Plan: The infographic narrative follows the 7-day chronological flow of the source study plan. It begins with an introduction and the 4 'Key Principles' presented as information cards. The main body is a vertical process flow, implemented with structured HTML/Tailwind cards, detailing the goal and key activities for each of the 7 days. This timeline provides the central narrative. To supplement this, two visualizations are included in a 'Visualizing Your Effort' section: 1) A Donut Chart showing the time breakdown of a typical study day (Goal: Compare Composition), and 2) A Stacked Bar Chart showing the 'Progression of Study Focus' (Goal: Show Change) over the week, illustrating the shift from review to mock exams. The infographic concludes with the 'Exam Day' guidelines, which are integrated into the Day 7 card. This structure was chosen to be linear and easy to follow, matching the source's step-by-step nature, while using charts to highlight key data patterns (time balance and activity progression) that are implicit in the text. -->
+    <!-- Visualization & Content Choices: 
+      1. Key Principles (4): Goal: Inform. Viz/Method: Styled HTML/Tailwind cards with Unicode icons. Justification: These are qualitative rules, best presented as clear, distinct text blocks for easy reading. (NO SVG/Mermaid).
+      2. Daily Time Breakdown (Typical Day): Goal: Compare (Composition). Viz: Donut Chart. Justification: A donut chart is perfect for showing the proportions of a whole, in this case, how a typical study day's time is allocated between study and breaks. Library: Chart.js (Canvas). (NO SVG).
+      3. Progression of Study Focus (Days 1-6): Goal: Change (over time). Viz: Stacked Bar Chart. Justification: This chart effectively shows how the *composition* of study activities (Review, Practice, Mock Exams) *changes* over the 7-day period, highlighting the plan's increasing intensity and shift in focus. Library: Chart.js (Canvas). (NO SVG).
+      4. 7-Day Plan Sequence (The Core): Goal: Organize (Process). Viz/Method: Vertical Process Flow using styled HTML/Tailwind cards. Justification: A timeline is the most logical way to show a 7-day plan. Since diagrams are banned, a structured, single-column list of cards is the cleanest, most responsive way to present this sequence. Method: HTML/CSS/Tailwind. (NO SVG/Mermaid).
+      5. Exam Day Guidelines: Goal: Inform. Viz/Method: Styled HTML list within the Day 7 card. Justification: A simple, clear checklist is the most effective way to present these final instructions, and integrating it into the Day 7 card keeps the chronological flow. Method: HTML/CSS/Tailwind. (NO SVG/Mermaid).
+    -->
+    <!-- CONFIRMATION: NO SVG graphics used. NO Mermaid JS used. -->
+
+    <header class="bg-[#073B4C] text-white p-6 shadow-lg">
+      <h1 class="text-3xl md:text-4xl font-bold text-center">
+        Your 7-Day Final Exam Study Plan
+      </h1>
+    </header>
+
+    <main class="max-w-6xl mx-auto p-4 md:p-8">
+      <section class="bg-white rounded-lg shadow-md p-6 mb-8">
+        <h2 class="text-2xl font-bold text-[#073B4C] mb-4">
+          Your Path to Exam Confidence
+        </h2>
+        <p class="text-lg text-gray-700">
+          This plan is structured to help you cover your material
+          systematically, avoid burnout, and build confidence for your exams. It
+          incorporates focused study sessions with regular short breaks, a
+          method designed to maximize retention and focus.
+        </p>
+      </section>
+
+      <section class="mb-8">
+        <h2 class="text-2xl font-bold text-center text-[#073B4C] mb-6">
+          Key Principles for Success
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div
+            class="bg-white rounded-lg shadow-md p-6 border-t-4 border-[#118AB2]"
+          >
+            <h3
+              class="text-xl font-semibold text-[#073B4C] mb-2 flex items-center"
+            >
+              <span class="text-2xl mr-2">🎯</span> Be Specific
+            </h3>
+            <p class="text-gray-600">
+              Replace "Subject A" with your actual subjects and specific
+              chapters you need to review.
+            </p>
+          </div>
+
+          <div
+            class="bg-white rounded-lg shadow-md p-6 border-t-4 border-[#06D6A0]"
+          >
+            <h3
+              class="text-xl font-semibold text-[#073B4C] mb-2 flex items-center"
+            >
+              <span class="text-2xl mr-2">🔄</span> Be Flexible
+            </h3>
+            <p class="text-gray-600">
+              This is a template. Adjust the times to fit your personal schedule
+              and energy levels.
+            </p>
+          </div>
+
+          <div
+            class="bg-white rounded-lg shadow-md p-6 border-t-4 border-[#FFD166]"
+          >
+            <h3
+              class="text-xl font-semibold text-[#073B4C] mb-2 flex items-center"
+            >
+              <span class="text-2xl mr-2">🧠</span> Active Recall
+            </h3>
+            <p class="text-gray-600">
+              Don't just read. Do practice problems, explain concepts out loud,
+              or create summary sheets.
+            </p>
+          </div>
+
+          <div
+            class="bg-white rounded-lg shadow-md p-6 border-t-4 border-[#FF6B6B]"
+          >
+            <h3
+              class="text-xl font-semibold text-[#073B4C] mb-2 flex items-center"
+            >
+              <span class="text-2xl mr-2">🥗</span> Stay Healthy
+            </h3>
+            <p class="text-gray-600">
+              Don't skip meals or sleep. A well-rested brain performs better.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-8">
+        <h2 class="text-2xl font-bold text-center text-[#073B4C] mb-6">
+          The 7-Day Breakdown
+        </h2>
+        <div class="space-y-8">
+          <div
+            class="bg-white rounded-lg shadow-md p-6 flex flex-col md:flex-row items-center"
+          >
+            <div
+              class="flex-shrink-0 w-24 h-24 bg-[#118AB2] text-white rounded-full flex items-center justify-center text-4xl font-bold shadow-lg mb-4 md:mb-0 md:mr-6"
+            >
+              Day 1
+            </div>
+            <div class="flex-grow">
+              <h3 class="text-2xl font-semibold text-[#073B4C]">
+                Planning & Foundational Review
+              </h3>
+              <p class="text-lg text-[#118AB2] font-semibold mb-2">
+                Goal: Organize materials and review challenging subjects first.
+              </p>
+              <ul class="list-disc list-inside text-gray-700 space-y-1">
+                <li>Gather all notes, textbooks, and syllabi.</li>
+                <li>Prioritize your weakest or most difficult subject.</li>
+                <li>Begin reviewing foundational concepts.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-lg shadow-md p-6 flex flex-col md:flex-row items-center"
+          >
+            <div
+              class="flex-shrink-0 w-24 h-24 bg-[#118AB2] text-white rounded-full flex items-center justify-center text-4xl font-bold shadow-lg mb-4 md:mb-0 md:mr-6"
+            >
+              Day 2
+            </div>
+            <div class="flex-grow">
+              <h3 class="text-2xl font-semibold text-[#073B4C]">
+                Deep Dive & Practice
+              </h3>
+              <p class="text-lg text-[#118AB2] font-semibold mb-2">
+                Goal: Focus on understanding and beginning to practice problems.
+              </p>
+              <ul class="list-disc list-inside text-gray-700 space-y-1">
+                <li>Work on practice problems for Subject A.</li>
+                <li>Review incorrect answers to understand mistakes.</li>
+                <li>Consolidate by writing a 1-page summary sheet.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-lg shadow-md p-6 flex flex-col md:flex-row items-center"
+          >
+            <div
+              class="flex-shrink-0 w-24 h-24 bg-[#118AB2] text-white rounded-full flex items-center justify-center text-4xl font-bold shadow-lg mb-4 md:mb-0 md:mr-6"
+            >
+              Day 3
+            </div>
+            <div class="flex-grow">
+              <h3 class="text-2xl font-semibold text-[#073B4C]">
+                Mixed Review & Concept Connection
+              </h3>
+              <p class="text-lg text-[#118AB2] font-semibold mb-2">
+                Goal: Mix subjects to strengthen memory and start connecting
+                ideas.
+              </p>
+              <ul class="list-disc list-inside text-gray-700 space-y-1">
+                <li>Review difficult concepts from Subject B.</li>
+                <li>Take an old practice test for Subject A.</li>
+                <li>Create and review flashcards.</li>
+                <li>Try to "teach" a key concept out loud.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-lg shadow-md p-6 flex flex-col md:flex-row items-center"
+          >
+            <div
+              class="flex-shrink-0 w-24 h-24 bg-[#FFD166] text-[#073B4C] rounded-full flex items-center justify-center text-4xl font-bold shadow-lg mb-4 md:mb-0 md:mr-6"
+            >
+              Day 4
+            </div>
+            <div class="flex-grow">
+              <h3 class="text-2xl font-semibold text-[#073B4C]">
+                Practice Exams & Stamina
+              </h3>
+              <p class="text-lg text-[#B48B0A] font-semibold mb-2">
+                Goal: Simulate exam conditions to build stamina and identify
+                weak spots.
+              </p>
+              <ul class="list-disc list-inside text-gray-700 space-y-1">
+                <li>Take a full, timed Mock Exam for Subject A.</li>
+                <li>Grade your exam and identify *why* you made mistakes.</li>
+                <li>Do targeted review based on your mock exam results.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-lg shadow-md p-6 flex flex-col md:flex-row items-center"
+          >
+            <div
+              class="flex-shrink-0 w-24 h-24 bg-[#FFD166] text-[#073B4C] rounded-full flex items-center justify-center text-4xl font-bold shadow-lg mb-4 md:mb-0 md:mr-6"
+            >
+              Day 5
+            </div>
+            <div class="flex-grow">
+              <h3 class="text-2xl font-semibold text-[#073B4C]">
+                Targeted Review
+              </h3>
+              <p class="text-lg text-[#B48B0A] font-semibold mb-2">
+                Goal: Focus intensely on the weak spots you identified.
+              </p>
+              <ul class="list-disc list-inside text-gray-700 space-y-1">
+                <li>Focus study sessions *only* on your weakest topics.</li>
+                <li>Take a timed Mock Exam for Subject B.</li>
+                <li>Grade and analyze your results.</li>
+                <li>Create a key formula/definition "cheat sheet".</li>
+              </ul>
+            </div>
+          </div>
+
+          <div
+            class="bg-white rounded-lg shadow-md p-6 flex flex-col md:flex-row items-center"
+          >
+            <div
+              class="flex-shrink-0 w-24 h-24 bg-[#FF6B6B] text-white rounded-full flex items-center justify-center text-4xl font-bold shadow-lg mb-4 md:mb-0 md:mr-6"
+            >
+              Day 6
+            </div>
+            <div class="flex-grow">
+              <h3 class="text-2xl font-semibold text-[#073B4C]">
+                Final Polish
+              </h3>
+              <p class="text-lg text-[#C04A4A] font-semibold mb-2">
+                Goal: Broad review of all subjects, focusing on memory recall.
+              </p>
+              <ul class="list-disc list-inside text-gray-700 space-y-1">
+                <li>Review all summary sheets and flashcards.</li>
+                <li>Take a final Mock Exam for Subject C.</li>
+                <li>Go over any last-minute, nagging questions.</li>
+                <li>Pack your bag and relax your mind.</li>
+              </ul>
+            </div>
+          </div>
+
+          <div
+            class="bg-green-100 border-l-8 border-[#06D6A0] rounded-lg shadow-md p-6 flex flex-col md:flex-row items-center"
+          >
+            <div
+              class="flex-shrink-0 w-24 h-24 bg-[#06D6A0] text-white rounded-full flex items-center justify-center text-4xl font-bold shadow-lg mb-4 md:mb-0 md:mr-6"
+            >
+              Day 7
+            </div>
+            <div class="flex-grow">
+              <h3 class="text-2xl font-semibold text-[#073B4C]">Exam Day!</h3>
+              <p class="text-lg text-[#048C6A] font-semibold mb-2">
+                Goal: Stay calm, confident, and focused.
+              </p>
+              <ul class="list-disc list-inside text-gray-700 space-y-1">
+                <li>Eat a good, healthy breakfast.</li>
+                <li>
+                  <span class="font-bold">Do not study!</span> A last-minute
+                  cram will only add stress.
+                </li>
+                <li>Arrive at your exam location with time to spare.</li>
+                <li>Take a deep breath. You've prepared for this!</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-white rounded-lg shadow-md p-6 mb-8">
+        <h2 class="text-2xl font-bold text-center text-[#073B4C] mb-6">
+          ✨ AI Study Assistant
+        </h2>
+        <p class="text-lg text-gray-700 text-center mb-6">
+          Feeling stuck on a concept from your plan? Use the "Active Recall"
+          principle right here. Enter a topic to get a simple explanation or
+          some practice questions.
+        </p>
+
+        <div class="max-w-2xl mx-auto">
+          <div>
+            <label
+              for="ai-prompt-input"
+              class="block text-sm font-semibold text-gray-700 mb-2"
+              >Enter a topic (e.g., "Mitochondria" or "The Chain Rule"):</label
+            >
+            <input
+              type="text"
+              id="ai-prompt-input"
+              class="w-full p-3 border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-[#118AB2]"
+              placeholder="Your topic..."
+            />
+          </div>
+
+          <div class="flex flex-col sm:flex-row gap-4 mt-4">
+            <button
+              id="explain-btn"
+              class="flex-1 bg-[#073B4C] text-white py-2 px-4 rounded-lg font-semibold hover:bg-[#118AB2] transition-colors duration-200 shadow-md"
+            >
+              ✨ Explain Concept
+            </button>
+            <button
+              id="questions-btn"
+              class="flex-1 bg-[#06D6A0] text-[#073B4C] py-2 px-4 rounded-lg font-semibold hover:bg-[#04a07b] transition-colors duration-200 shadow-md"
+            >
+              ✨ Generate Practice Questions
+            </button>
+          </div>
+
+          <div id="ai-loading" class="text-center py-6 hidden">
+            <div class="loader mx-auto"></div>
+            <p class="text-gray-600 font-semibold mt-4">
+              Generating response...
+            </p>
+          </div>
+
+          <div id="ai-results" class="mt-6 hidden">
+            <p class="text-gray-500">
+              Your AI-generated content will appear here.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="mb-8">
+        <h2 class="text-2xl font-bold text-center text-[#073B4C] mb-6">
+          Visualizing Your Effort
+        </h2>
+        <p class="text-lg text-gray-700 text-center mb-6">
+          The plan is designed for balance and progression. Your study sessions
+          become more focused as you get closer to the exam, shifting from broad
+          review to intensive, exam-like practice.
+        </p>
+
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div class="bg-white rounded-lg shadow-md p-6">
+            <h3 class="text-xl font-semibold text-[#073B4C] text-center mb-4">
+              A Balanced Study Day (Example)
+            </h3>
+            <p class="text-gray-600 text-center mb-4">
+              A typical full study day (like Day 2 or 3) allocates significant
+              time for focused work, but also builds in essential breaks for
+              rest and consolidation. This breakdown prevents burnout.
+            </p>
+            <div class="chart-container">
+              <canvas id="timeDonutChart"></canvas>
+            </div>
+          </div>
+
+          <div class="bg-white rounded-lg shadow-md p-6">
+            <h3 class="text-xl font-semibold text-[#073B4C] text-center mb-4">
+              Progression of Study Focus
+            </h3>
+            <p class="text-gray-600 text-center mb-4">
+              This chart shows how your study *focus* changes during the week.
+              You start with foundational review, then move heavily into
+              practice, and finally dedicate significant time to mock exams.
+            </p>
+            <div class="chart-container">
+              <canvas id="focusBarChart"></canvas>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="text-center p-6 bg-gray-200 text-gray-600 mt-8">
+      <p>&copy; 2025 Study Plan Infographics. Good luck on your exams!</p>
+    </footer>
+
+    <script>
+      // ... existing code ... -->
+      return lines;
+
+      const tooltipTitleCallback = (tooltipItems) => {
+        const item = tooltipItems[0];
+        let label = item.chart.data.labels[item.dataIndex];
+        if (Array.isArray(label)) {
+          return label.join(" ");
+        } else {
+          return label;
+        }
+      };
+
+      const sharedTooltipConfig = {
+        plugins: {
+          tooltip: {
+            callbacks: {
+              title: tooltipTitleCallback,
+            },
+          },
+        },
+      };
+
+      const palette = {
+        darkBlue: "#073B4C",
+        midBlue: "#118AB2",
+        green: "#06D6A0",
+        yellow: "#FFD166",
+        red: "#FF6B6B",
+      };
+
+      const fetchWithBackoff = async (
+        url,
+        options,
+        retries = 3,
+        delay = 1000
+      ) => {
+        try {
+          const response = await fetch(url, options);
+          if (!response.ok) {
+            if (response.status === 429 && retries > 0) {
+              console.warn(
+                `Throttled. Retrying in ${delay}ms... (${retries} retries left)`
+              );
+              await new Promise((res) => setTimeout(res, delay));
+              return fetchWithBackoff(url, options, retries - 1, delay * 2);
+            }
+            throw new Error(
+              `API request failed with status ${response.status}`
+            );
+          }
+          return response.json();
+        } catch (error) {
+          console.error("API Fetch Error:", error);
+          throw error;
+        }
+      };
+
+      const callGeminiAPI = async (systemPrompt, userQuery) => {
+        const apiKey = ""; // Leave as-is
+        const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent?key=${apiKey}`;
+
+        const payload = {
+          contents: [{ parts: [{ text: userQuery }] }],
+          systemInstruction: {
+            parts: [{ text: systemPrompt }],
+          },
+        };
+
+        const options = {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(payload),
+        };
+
+        return fetchWithBackoff(apiUrl, options);
+      };
+
+      const formatResponse = (text) => {
+        let html = text.replace(/\*\*(.*?)\*\*/g, "<strong>$1</strong>");
+        html = html.replace(/\n/g, "<br>");
+        return html;
+      };
+
+      const handleApiCall = async (systemPrompt, userQuery, ui) => {
+        ui.loadingDiv.classList.remove("hidden");
+        ui.resultsDiv.classList.add("hidden");
+        ui.resultsDiv.innerHTML = "";
+        ui.explainBtn.disabled = true;
+        ui.questionsBtn.disabled = true;
+
+        try {
+          const result = await callGeminiAPI(systemPrompt, userQuery);
+          const text = result.candidates?.[0]?.content?.parts?.[0]?.text;
+
+          if (text) {
+            ui.resultsDiv.innerHTML = formatResponse(text);
+          } else {
+            ui.resultsDiv.innerHTML =
+              '<p class="text-red-500">Sorry, something went wrong while generating the response. Please try again.</p>';
+          }
+        } catch (error) {
+          console.error("Error during API call:", error);
+          ui.resultsDiv.innerHTML = `<p class="text-red-500">An error occurred: ${error.message}. Check the console for details.</p>`;
+        } finally {
+          ui.loadingDiv.classList.add("hidden");
+          ui.resultsDiv.classList.remove("hidden");
+          ui.explainBtn.disabled = false;
+          ui.questionsBtn.disabled = false;
+        }
+      };
+
+      window.onload = function () {
+        const ctxDonut = document
+          .getElementById("timeDonutChart")
+          .getContext("2d");
+        new Chart(ctxDonut, {
+          type: "doughnut",
+          data: {
+            labels: [
+              "Focused Study",
+              "Review & Consolidation",
+              "Short Breaks",
+              "Lunch Break",
+            ],
+            datasets: [
+              {
+                data: [300, 45, 55, 70],
+                backgroundColor: [
+                  palette.midBlue,
+                  palette.green,
+                  palette.yellow,
+                  palette.red,
+                ],
+                borderColor: "#ffffff",
+                borderWidth: 3,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            ...sharedTooltipConfig,
+            plugins: {
+              ...sharedTooltipConfig.plugins,
+              legend: {
+                position: "bottom",
+              },
+            },
+          },
+        });
+
+        const ctxBar = document
+          .getElementById("focusBarChart")
+          .getContext("2d");
+        new Chart(ctxBar, {
+          type: "bar",
+          data: {
+            labels: ["Days 1-2", "Days 3-4", "Days 5-6"],
+            datasets: [
+              {
+                label: "Review & Concepts",
+                data: [3, 2, 1],
+                backgroundColor: palette.midBlue,
+              },
+              {
+                label: "Practice Problems",
+                data: [2, 3, 2],
+                backgroundColor: palette.green,
+              },
+              {
+                label: "Mock Exams",
+                data: [0, 2, 3],
+                backgroundColor: palette.red,
+              },
+            ],
+          },
+          options: {
+            responsive: true,
+            maintainAspectRatio: false,
+            ...sharedTooltipConfig,
+            scales: {
+              x: {
+                stacked: true,
+                grid: { display: false },
+              },
+              y: {
+                stacked: true,
+                beginAtZero: true,
+                ticks: {
+                  precision: 0,
+                },
+              },
+            },
+            plugins: {
+              ...sharedTooltipConfig.plugins,
+              legend: {
+                position: "bottom",
+              },
+            },
+          },
+        });
+
+        // --- New Gemini API Feature Listeners ---
+
+        const ui = {
+          inputField: document.getElementById("ai-prompt-input"),
+          explainBtn: document.getElementById("explain-btn"),
+          questionsBtn: document.getElementById("questions-btn"),
+          loadingDiv: document.getElementById("ai-loading"),
+          resultsDiv: document.getElementById("ai-results"),
+        };
+
+        ui.explainBtn.addEventListener("click", () => {
+          const userQuery = ui.inputField.value;
+          if (!userQuery) {
+            ui.resultsDiv.classList.remove("hidden");
+            ui.resultsDiv.innerHTML =
+              '<p class="text-yellow-600">Please enter a topic first.</p>';
+            return;
+          }
+          const systemPrompt =
+            "You are a friendly and encouraging study tutor. Explain the following concept clearly and concisely, as if to a high school or college student. Use simple language and avoid jargon where possible.";
+          handleApiCall(systemPrompt, `Explain this concept: ${userQuery}`, ui);
+        });
+
+        ui.questionsBtn.addEventListener("click", () => {
+          const userQuery = ui.inputField.value;
+          if (!userQuery) {
+            ui.resultsDiv.classList.remove("hidden");
+            ui.resultsDiv.innerHTML =
+              '<p class="text-yellow-600">Please enter a topic first.</p>';
+            return;
+          }
+          const systemPrompt =
+            "You are a helpful quiz generator. Create 3-5 practice questions (e.g., multiple choice, short answer, or true/false) based on the following topic. Provide the questions first, then provide the answers clearly at the end.";
+          handleApiCall(
+            systemPrompt,
+            `Generate practice questions for: ${userQuery}`,
+            ui
+          );
+        });
+      };
+    </script>
+  </body>
+</html>

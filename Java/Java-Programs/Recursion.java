@@ -272,6 +272,17 @@ public class Recursion {
         reverseOfString(str, idx - 1);
     }
 
+    public static void numberToStringII(int n) {
+        if (n == 0) {
+            return;
+        }
+        String[] numString = { "Zero", "One", "Two", "Three", "Four", "five", "Six", "Seven", "eight", "nine" };
+
+        numberToStringII(n / 10);
+        System.out.print(numString[n % 10] + " ");
+
+    }
+
     public static void main(String[] args) {
         // Scanner sc = new Scanner(System.in);
         // System.out.println("Enter a number:");
@@ -285,7 +296,7 @@ public class Recursion {
         // System.out.println(fibonacci(5));
 
         // int arr[] = { 10, 3, 3, 4, 5, 6, 6 };
-        // System.out.println(isSorted(arr, 0));
+        // System.out.println(isSorted(arr, 0));f
         // System.out.println(firstIndex(arr, 0, 6));
         // System.out.println(lastOccurance(arr, 0, 3));
         // System.out.println(power(2, 3));
@@ -320,7 +331,10 @@ public class Recursion {
         // towerOfHanoi(3, "Source", "helper", "destination");
         // towerOfHanoi(2, "Source", "helper", "destination");
 
-        reverseOfString("null", "null".length() - 1);
+        // reverseOfString("null", "null".length() - 1);
+
+        numberToStringII(123);
+
     }
 
 }

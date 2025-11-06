@@ -89,6 +89,32 @@ public class Recursion {
         return x * power(x, n - 1);
     }
 
+    // leet-code soln
+    public double myPow(double x, int n) {
+
+        if (n < 0) {
+            long val = (long) n;
+            val = Math.abs(val);
+            return 1.0 / helper(x, val);
+        } else {
+            return helper(x, n);
+        }
+
+    }
+
+    private double helper(double x, long n) {
+        if (n == 0) {
+            return 1;
+        }
+
+        double halfPow = helper(x, n / 2);
+        double halfPowSq = halfPow * halfPow;
+        if (n % 2 == 1) {
+            halfPowSq = x * halfPowSq;
+        }
+        return halfPowSq;
+    }
+
     public static int optimizedPower(int x, int n) {
         if (n == 0) {
             return 1;
@@ -274,7 +300,7 @@ public class Recursion {
 
     public static void numberToStringII(int n) {
         if (n == 0) {
-            return;
+            // return;
         }
         String[] numString = { "Zero", "One", "Two", "Three", "Four", "five", "Six", "Seven", "eight", "nine" };
 
@@ -333,8 +359,7 @@ public class Recursion {
 
         // reverseOfString("null", "null".length() - 1);
 
-        numberToStringII(123);
-
+        // numberToStringII(123);
     }
 
 }

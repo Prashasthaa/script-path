@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Recursion {
@@ -307,6 +309,28 @@ public class Recursion {
         numberToStringII(n / 10);
         System.out.print(numString[n % 10] + " ");
 
+    }
+
+    // 78. Subsets
+
+    class Solution {
+        public List<List<Integer>> subsets(int[] nums) {
+            List<List<Integer>> result = new ArrayList<>();
+            helper(nums, 0, nums.length, result, new ArrayList<>());
+            return result;
+
+        }
+
+        private void helper(int nums[], int index, int n, List<List<Integer>> result, List<Integer> current) {
+            if (index == n) {
+                result.add(new ArrayList<>(current));
+                return;
+            }
+            helper(nums, index + 1, n, result, current);
+            current.add(nums[index]);
+            helper(nums, index + 1, n, result, current);
+            current.remove(current.size() - 1);
+        }
     }
 
     public static void main(String[] args) {

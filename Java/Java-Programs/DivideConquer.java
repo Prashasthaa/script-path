@@ -7,6 +7,7 @@ public class DivideConquer {
         System.out.println();
     }
 
+    // MERGESORT
     public static void merge(int arr[], int si, int ei, int mid) {
         int temp[] = new int[ei - si + 1];
         int i = si; // iterator for left
@@ -40,6 +41,37 @@ public class DivideConquer {
         }
     }
 
+    // QuickSort
+    public static void quickSort(int arr[], int si, int ei) {
+        if (si >= ei) {
+            return;
+        }
+
+        int partionId = partition(arr, si, ei);
+        quickSort(arr, si, partionId - 1);// left side
+        quickSort(arr, partionId + 1, ei);
+    }
+
+    public static int partition(int arr[], int si, int ei) {
+        int pivot = arr[ei];
+        int i = si - 1; // to make place for els smaller than pivot
+
+        for (int j = si; j < ei; j++) {
+            if (arr[j] <= pivot) {
+                i++;
+                // swap
+                int temp = arr[j];
+                arr[j] = arr[i];
+                arr[i] = temp;
+            }
+        }
+        i++;
+        int temp = pivot;
+        arr[ei] = arr[i];
+        arr[i] = temp;
+        return ei;
+    }
+
     public static void mergeSort(int arr[], int si, int ei) {
 
         if (si >= ei) {
@@ -56,7 +88,8 @@ public class DivideConquer {
     public static void main(String[] args) {
         int arr[] = { 6, 3, 9, 5, 2, 8 };
         printArr(arr);
-        mergeSort(arr, 0, arr.length - 1);
+        // mergeSort(arr, 0, arr.length - 1);
+        quickSort(arr, 0, arr.length - 1);
         printArr(arr);
 
     }

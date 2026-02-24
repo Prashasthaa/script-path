@@ -75,3 +75,70 @@ print(len(nums))
 
 collection=set() #empty set
 
+
+# Methods of set
+collection.add(1)
+collection.add(2)
+collection.add(2)
+collection.add(4)
+collection.add(5)
+collection.add(6)
+collection.add(7)
+
+print(collection)
+
+collection.remove(4)
+
+print(collection)
+
+collection.pop() #randomly element is popped
+print(collection)
+
+collection.clear()
+
+print(len(collection))
+
+
+set1={1,2,3,4,5,6}
+
+set2={0,9,8,7,6,5}
+
+# union combines both the set values & returns new set
+# intersection combines common values & returns new set
+
+union_set=set1.union(set2)
+intersection_set=set1.intersection(set2)
+
+print(union_set)
+print(intersection_set)
+
+# Practice Questions
+
+# Q1.
+word_meaning={
+    "table":["a piece of furniture","list of facts and figures"],
+    "cat":"a small animal",
+}
+
+print(word_meaning)
+
+# Q2.
+subjects=["python","java","C++","C","python","javaScript","java","python","java","C++"]
+
+classroom=set(subjects)
+
+print(len(classroom))
+
+# Q3.
+set={9,9.0}
+print(set)
+
+set={9,'9.0'}
+print(set)
+
+values=[
+    {"float",9.0},
+    {"int",9}
+]
+print(values)
+

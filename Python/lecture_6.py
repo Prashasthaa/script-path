@@ -76,10 +76,14 @@ def cal_fact(n):
 cal_fact(6)
 cal_fact(4)
 
-# Q3.
+# Q4.
 def converter(usd_val):
     inr=usd_val*83
     print(usd_val,"USD =",inr,"INR")
 
 converter(90)
 converter(10)
+
+calculate_sum(1,29)
+calculate_sum(1,2)
+calculate_sum(21,26)

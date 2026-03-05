@@ -115,3 +115,31 @@ print("-------------Print 1 to n--------")
 
 print_num(9)
 
+def factorial(n):
+    if (n==0 | n==1):
+        return 1
+    else:
+        return n*factorial(n-1)
+
+print("--------------Factorial----------")
+
+print(factorial(1))
+print(factorial(3))
+print(factorial(7))
+
+print("------Practice questions---------")
+
+# Q1.
+
+def sum_of_n(n):
+    if n==1:
+        return 1
+    return n+sum_of_n(n-1)
+
+print("Sum of n numbers:")
+
+print(sum_of_n(4))
+print(sum_of_n(3))
+print(sum_of_n(2))
+
+  

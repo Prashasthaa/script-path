@@ -87,3 +87,31 @@ converter(10)
 calculate_sum(1,29)
 calculate_sum(1,2)
 calculate_sum(21,26)
+
+
+# Recursion
+
+# when a function calls itself repeatedly
+
+
+print("----------------Recursion--------------------")
+def print_num_reverse(n):
+    if n==0:
+        return
+    print(n)
+    print_num_reverse(n-1)
+
+print("-------------Print n to 1 backwards--------")
+
+print_num_reverse(5)
+
+def print_num(n):
+    if n==0:
+        return
+    print_num(n-1) #8,7,6,5,4,3,2,1,0
+    print(n)
+
+print("-------------Print 1 to n--------")
+
+print_num(9)
+
